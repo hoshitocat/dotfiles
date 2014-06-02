@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/dor0thy/.vim'
+let g:netrw_dirhist_2='/Users/dor0thy/.vim/ftdetect'
+let g:netrw_dirhist_3='/Users/dor0thy/.vim'
+let g:netrw_dirhist_4='/Users/dor0thy/.vim/colors'
+let g:netrw_dirhist_5='/Users/dor0thy/.vim'
+let g:netrw_dirhist_6='/Users/dor0thy/.vim/colors'
+let g:netrw_dirhist_7='/Users/dor0thy/.ssh'
+let g:netrw_dirhist_8='/Users/dor0thy/.vim/syntax'
