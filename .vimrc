@@ -19,6 +19,7 @@ set title "indicate a title
 set hlsearch "highlight the search result characters
 set visualbell " no beep sound
 set backspace=start,eol,indent
+set formatoptions-=ro " auto commentout setting off
 
 " \cで行の先頭にコメントをつけたり外したりできる$
 nmap <Leader>c <Plug>(caw:i:toggle)$
@@ -30,7 +31,6 @@ if has('persistent_undo')
   set undofile
 endif
 
-set formatoptions-=ro
 autocmd FileType * set formatoptions-=ro
 " コメントアウト改行後に改行さきの行も自動的にコメントアウトされるオプションを解除$
 
@@ -75,6 +75,8 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'aharisu/vim_goshrepl' "LiSP系
 NeoBundle 'aharisu/vim-gdev' "LiSP系
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'othree/html5.vim'
 
 " if_luaが有効ならneocompleteを使う
 NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
@@ -119,6 +121,11 @@ autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
 " nnoremap <silent> [previm]r :call previm#refresh()<CR>
 " =======================previmの設定=========================
 
+" html5.vim setting
+let g:html5_event_handler_attributes_complete = 1
+let g:html5_rdfa_attributes_complete = 1
+let g:html5_microdata_attributes_complete = 1
+let g:html5_aria_attributes_complete = 1
 
 call neobundle#end()
 
