@@ -28,25 +28,16 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
 
 # rbenv関連
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 export RBENV_VERSION=2.1.1
 
 # LANG設定
 export LANG=en_US.UTF-8
 
 # lsで表示されるカラーを変更
-export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ls="ls -G"
-
-# MySQL Path Setting
-export PATH="/usr/local/mysql/bin:$PATH"
 
 # rm関係の設定
 alias rm="rm -i"
 
 # viコマンドでもvimが起動する
 alias vi="vim"
-
-# vimのバージョン7.4にするためのPATH設定
-export PATH="/usr/local/bin:$PATH"

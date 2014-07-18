@@ -1,7 +1,6 @@
 "#########################
 "# Basic settings of Vim #
 "#########################
-set encoding=utf-8 "encoding utf-8
 colorscheme jellybeans_custom "setting colorscheme
 syntax on
 
@@ -24,6 +23,12 @@ set backspace=start,eol,indent
 " \cで行の先頭にコメントをつけたり外したりできる$
 nmap <Leader>c <Plug>(caw:i:toggle)$
 vmap <Leader>c <Plug>(caw:i:toggle)$
+
+" Persistent undo
+if has('persistent_undo')
+  set undodir=~/.vim/info/undo
+  set undofile
+endif
 
 set formatoptions-=ro
 autocmd FileType * set formatoptions-=ro
@@ -69,6 +74,7 @@ NeoBundle 'Shougo/vimproc', {
 \ }
 NeoBundle 'aharisu/vim_goshrepl' "LiSP系
 NeoBundle 'aharisu/vim-gdev' "LiSP系
+NeoBundle 'Shougo/unite.vim'
 
 " if_luaが有効ならneocompleteを使う
 NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
