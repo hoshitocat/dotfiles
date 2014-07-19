@@ -1,5 +1,16 @@
 caw.vim
+emmet-vim
+html5.vim
 neobundle.vim
+neocomplete
 neosnippet-snippets
 neosnippet.vim
+open-browser.vim
+previm
+unite.vim
+vim-gdev
 vim-quickrun
+vim-surround
+vim_goshrepl
+vimproc
+vimshell
