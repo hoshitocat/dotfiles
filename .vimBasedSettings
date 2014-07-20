@@ -1,17 +1,6 @@
-" ***************************
-" Read NeoBundle setting file
-" ***************************
-if filereadable(expand("~/dotfiles/.vimNeoBundle"))
-  source ~/dotfiles/.vimNeoBundle
-endif
-
 " *********************
 " Basic settings of Vim
 " *********************
-colorscheme jellybeans_custom "setting colorscheme
-syntax on
-filetype indent plugin on
-
 " to store the cursor position
 autocmd BufWinLeave ?* silent mkview
 autocmd BufWinEnter ?* silent loadview
@@ -32,11 +21,15 @@ set autoindent "continue to indent a new line
 set smartindent "a new line to increase or decrease the indent
 set ignorecase "not case sensitive when searching
 set list "visualization spaces and line breaks
-set listchars=trail:･
+set listchars=trail:･ " seeing white space
 set title "indicate a title
 set hlsearch "highlight the search result characters
 set visualbell " no beep sound
 set backspace=start,eol,indent
 set formatoptions-=ro " auto commentout setting off
 autocmd FileType * set formatoptions-=ro " コメントアウト改行後に改行さきの行も自動的にコメントアウトされるオプションを解除$
+
+colorscheme jellybeans_custom "setting colorscheme
+syntax on
+filetype indent plugin on
 

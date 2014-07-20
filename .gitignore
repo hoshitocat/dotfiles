@@ -1,3 +1,4 @@
 .DS_Store
 .git
 .vim/view/*
+.vim/info/undo/*

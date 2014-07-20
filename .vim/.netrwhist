@@ -1,6 +1,6 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/dor0thy/.vim'
-let g:netrw_dirhist_2='/Users/dor0thy/.vim/view'
-let g:netrw_dirhist_3='/Users/dor0thy/.vim'
-let g:netrw_dirhist_4='/Users/dor0thy/dotfiles'
+let g:netrw_dirhist_1='/Users/dor0thy/.vim/bundle'
+let g:netrw_dirhist_2='/Users/dor0thy/.vim/bundle/indentLine'
+let g:netrw_dirhist_3='/Users/dor0thy/.vim/bundle/indentLine/after'
+let g:netrw_dirhist_4='/Users/dor0thy/.vim/bundle/indentLine/after/plugin'

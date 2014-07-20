@@ -1,6 +1,7 @@
 caw.vim
 emmet-vim
 html5.vim
+indentLine
 neobundle.vim
 neocomplete
 neosnippet-snippets
