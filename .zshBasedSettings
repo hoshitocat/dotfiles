@@ -27,6 +27,13 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
 
+# cdr
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-max 5000
+zstyle ':chpwd:*' recent-dirs-default yes
+zstyle ':completion:*' recent-dirs-insert both
+
 # LANG設定
 export LANG=en_US.UTF-8
 
@@ -38,6 +45,3 @@ alias rm="rm -i"
 
 # viコマンドでもvimが起動する
 alias vi="vim"
-
-# rbenv versions
-
