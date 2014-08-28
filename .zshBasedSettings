@@ -45,3 +45,11 @@ alias rm="rm -i"
 
 # viコマンドでもvimが起動する
 alias vi="vim"
+
+# history
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=100000
+
+# zsh doesn't classify uppercase and lowercase.
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
