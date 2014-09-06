@@ -43,6 +43,9 @@ alias ls="ls -G"
 # rm関係の設定
 alias rm="rm -i"
 
+# grep match color text
+alias grep="grep --color -n"
+
 # viコマンドでもvimが起動する
 alias vi="vim"
 
