@@ -32,6 +32,7 @@ set t_ut= " tmux start vim color
 set t_Co=256 " tmux start vim color
 set list "visualization spaces and line breaks
 set cursorline
+set colorcolumn=
 highlight ColorColumn ctermbg=6
 set cursorcolumn
 
