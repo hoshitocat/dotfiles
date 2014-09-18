@@ -3,7 +3,8 @@
 " **********************
 
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  set nocompatible
+  " Be iMproved
 
   " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -26,13 +27,13 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tpope/vim-surround' 
 NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-    \ 'windows' : 'make -f make_mingw32.mak',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-  \ },
-\ }
+      \ 'build' : {
+      \ 'windows' : 'make -f make_mingw32.mak',
+      \ 'cygwin' : 'make -f make_cygwin.mak',
+      \ 'mac' : 'make -f make_mac.mak',
+      \ 'unix' : 'make -f make_unix.mak',
+      \ },
+      \ }
 NeoBundle 'aharisu/vim_goshrepl' "LiSP系
 NeoBundle 'aharisu/vim-gdev' "LiSP系
 NeoBundle 'Shougo/unite.vim'
@@ -44,7 +45,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 " if_luaが有効ならneocompleteを使う
 NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 
-"" ============================neocomplete===============================
+" neocomplete
 let g:neocomplete#force_overwrite_completefunc = 1
 if neobundle#is_installed('neocomplete')
   " neocomplete用設定
@@ -69,35 +70,28 @@ elseif neobundle#is_installed('neocomplcache')
 endif
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-"" ============================neocomplete===============================
 
-"LiSP系の設定
-let g:neocomplete#keyword_patterns['gosh-repl'] = "[[:alpha:]+*/@$_=.!?-][[:alnum:]+*/@$_:=.!?-]*"
+" previm
+" autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
+" let g:previm_open_cmd = ''
+" nnoremap [previm] <Nop>
+" nmap <Space>p [previm]
+" nnoremap <silent> [previm]o :<C-u>PrevimOpen<CR>
+" nnoremap <silent> [previm]r :call previm#refresh()<CR>
 
-" =======================previmの設定=========================
-autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
-
-let g:previm_open_cmd = ''
-nnoremap [previm] <Nop>
-nmap <Space>p [previm]
-nnoremap <silent> [previm]o :<C-u>PrevimOpen<CR>
-nnoremap <silent> [previm]r :call previm#refresh()<CR>
-" =======================previmの設定=========================
-
-" ***indentLine setting***
+" indentLine
 let g:indentLine_color_term = 239
 let g:indentLine_color_dark = 1
 let g:indentLine_char = "¦"
 set list lcs=tab:\¦\
-" ***indentLine setting***
 
-" html5.vim setting
+" html5.vim
 let g:html5_event_handler_attributes_complete = 1
 let g:html5_rdfa_attributes_complete = 1
 let g:html5_microdata_attributes_complete = 1
 let g:html5_aria_attributes_complete = 1
 
-" \cで行の先頭にコメントをつけたり外したりできる$
+" caw.vim
 nmap <Leader>c <Plug>(caw:i:toggle)$
 vmap <Leader>c <Plug>(caw:i:toggle)$
 
@@ -107,12 +101,8 @@ call neobundle#end()
 let tex_flavor='latex'
 set grepprg=grep\ -nH\ $*
 set shellslash
-" Macの場合デフォルトでPDF
 let g:Tex_DefaultTargetFormat='pdf'
-
 let g:Tex_CompileRule_dvi='platex --interaction=nonstopmode $*'
 let g:Tex_CompileRule_pdf='dvipdfmx $*.dvi'
 let g:Tex_FormatDependency_pdf='dvi,pdf'
-
-" PDFはPreview.appで開く
 let g:Tex_ViewRule_pdf='open -a Preview.app'

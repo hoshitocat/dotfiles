@@ -11,5 +11,4 @@ if filereadable(expand("~/dotfiles/.vimBasedSettings"))
 endif
 
 set formatoptions-=ro
-autocmd FileType * set formatoptions-=ro " コメントアウト改行後に改行さきの行も自動的にコメントアウトされるオプションを解除$
-set cursorline
+autocmd FileType * set formatoptions-=ro

@@ -1,7 +1,7 @@
 # Created by newuser for 4.3.17
 
 # gitのブランチをプロンプトに表示するための機能を読み込む
-source /usr/local/git/contrib/completion/git-prompt.sh
+source ~/dotfiles/git-prompt.sh
 
 # zshの補完機能
 autoload -U compinit

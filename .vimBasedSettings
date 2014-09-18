@@ -35,4 +35,5 @@ set cursorline
 set colorcolumn=
 highlight ColorColumn ctermbg=6
 set cursorcolumn
+set clipboard+=unnamed
 
