@@ -2,4 +2,3 @@
 .git
 .vim/view/*
 .vim/info/undo/*
-peco-sources/select-history.zsh
