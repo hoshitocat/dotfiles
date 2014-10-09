@@ -12,7 +12,7 @@ if [ -d ${HOME}/.plenv ]; then
 fi
 
 # vim version 7.4
-export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:/usr/local/bin"
 
 # MySQL Path Setting
 export PATH="/usr/local/mysql/bin:$PATH"
