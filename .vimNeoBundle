@@ -75,7 +75,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 " indentLine
 let g:indentLine_color_term = 239
 let g:indentLine_color_dark = 1
-let g:indentLine_char = "¦"
+let g:indentLine_char = "┆"
 set list lcs=tab:\¦\
 
 " html5.vim

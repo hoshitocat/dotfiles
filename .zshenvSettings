@@ -1,5 +1,8 @@
 export TERM=xterm-256color
 
+# vim version 7.4
+export PATH="/usr/local/bin:$PATH"
+
 # rbenv
 if [ -d ${HOME}/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:${HOME}/.rbenv/shims:${PATH}"
@@ -10,9 +13,6 @@ if [ -d ${HOME}/.plenv ]; then
   export PATH=${HOME}/.plenv/bin/:${HOME}/.plenv/shims:${PATH}
   eval "$(plenv init -)"
 fi
-
-# vim version 7.4
-export PATH="$PATH:/usr/local/bin"
 
 # MySQL Path Setting
 export PATH="/usr/local/mysql/bin:$PATH"
