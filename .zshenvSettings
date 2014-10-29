@@ -10,8 +10,15 @@ if [ -d ${HOME}/.rbenv ]; then
 fi
 
 if [ -d ${HOME}/.plenv ]; then
-  export PATH=${HOME}/.plenv/bin/:${HOME}/.plenv/shims:${PATH}
+  export PATH="${HOME}/.plenv/bin/:${HOME}/.plenv/shims:${PATH}"
   eval "$(plenv init -)"
+fi
+
+# pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH="${PYENV_ROOT}/bin:$PATH"
+    eval "$(pyenv init -)"
 fi
 
 # MySQL Path Setting
