@@ -37,3 +37,6 @@ highlight ColorColumn ctermbg=6
 set cursorcolumn
 set clipboard+=unnamed
 
+" created template
+autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
+autocmd BufNewFile *.html 0r $HOME/dotfiles.vimTemplates/template.html
