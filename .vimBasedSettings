@@ -26,20 +26,20 @@ set ignorecase "not case sensitive when searching
 set listchars=trail:･ " seeing white space
 set title "indicate a title
 set hlsearch "highlight the search result characters
-set visualbell " no beep sound
 set backspace=start,eol,indent
 set t_ut= " tmux start vim color 
 set t_Co=256 " tmux start vim color
 set list "visualization spaces and line breaks
-set cursorline
-set colorcolumn=
-highlight ColorColumn ctermbg=6
-set cursorcolumn
+set nocursorline
+" set colorcolumn=
+" highlight ColorColumn ctermbg=6
+set nocursorcolumn
 set clipboard+=unnamed
+set wildmode=list:longest
 
 " created template
-autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
-autocmd BufNewFile *.html 0r $HOME/dotfiles/.vimTemplates/template.html
+" autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
+" autocmd BufNewFile *.html 0r $HOME/dotfiles/.vimTemplates/template.html
 
 " netrw's style is liststyle
 let g:netrw_liststyle=3

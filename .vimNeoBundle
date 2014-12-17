@@ -1,6 +1,7 @@
 " **********************
 " NeoBundle Setting File
 " **********************
+let mapleader = ','
 
 if has('vim_starting')
   set nocompatible
@@ -21,6 +22,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tpope/vim-surround' 
@@ -35,7 +38,6 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'aharisu/vim_goshrepl' "LiSP系
 NeoBundle 'aharisu/vim-gdev' "LiSP系
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'Yggdroot/indentLine'
@@ -75,7 +77,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 " indentLine
 let g:indentLine_color_term = 239
 let g:indentLine_color_dark = 1
-let g:indentLine_char = "┆"
+let g:indentLine_char = "|"
 set list lcs=tab:\¦\
 
 " html5.vim
@@ -83,6 +85,30 @@ let g:html5_event_handler_attributes_complete = 1
 let g:html5_rdfa_attributes_complete = 1
 let g:html5_microdata_attributes_complete = 1
 let g:html5_aria_attributes_complete = 1
+
+" unite.vim
+let g:unite_enable_start_insert = 1
+let g:unite_enable_split_vertically = 0
+let g:unite_winwidth = 40
+nmap <Space> [Unite]
+nnoremap [Unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+nnoremap [Unite]m :<C-u>Unite  file_mru <CR>
+nnoremap [Unite]rc :<C-u>Unite file_rec/async:app/controllers/ <CR>
+nnoremap [Unite]rfc :<C-u>Unite file file/new -input=app/controllers/ <CR>
+nnoremap [Unite]rm :<C-u>Unite file_rec/async:app/models/ <CR>
+nnoremap [Unite]rfm :<C-u>Unite file file/new -input=app/models/ <CR>
+nnoremap [Unite]rv :<C-u>Unite file_rec/async:app/views/ <CR>
+nnoremap [Unite]rfv :<C-u>Unite file file/new -input=app/views/ <CR>
+nnoremap [Unite]rs :<C-u>Unite file_rec/async:app/assets/stylesheets/ <CR>
+nnoremap [Unite]rfs :<C-u>Unite file file/new -input=app/assets/stylesheets/ <CR>
+nnoremap [Unite]rj :<C-u>Unite file_rec/async:app/assets/javascripts/ <CR>
+nnoremap [Unite]rfj :<C-u>Unite file file/new -input=app/assets/javascripts/ <CR>
+nnoremap [Unite]ro :<C-u>Unite file_rec/async:config/ <CR>
+nnoremap [Unite]rfo :<C-u>Unite file file/new -input=config/ <CR>
+nnoremap [Unite]rl :<C-u>Unite file_rec/async:lib/ <CR>
+nnoremap [Unite]rfl :<C-u>Unite file file/new -input=lib/ <CR>
+nnoremap [Unite]rr :<C-u>Unite file_rec/async:spec/ <CR>
+nnoremap [Unite]rfr :<C-u>Unite file file/new -input=spec/ <CR>
 
 " caw.vim
 nmap <Leader>c <Plug>(caw:i:toggle)$
@@ -106,7 +132,7 @@ augroup PrevimSettings
   autocmd!
   autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
   nnoremap [previm] <Nop>
-  nmap <Space>p [previm]
+  nmap <Leader>p [previm]
   nnoremap <silent> [previm]o :<C-u>PrevimOpen<CR>
   nnoremap <silent> [previm]r :call previm#refresh()<CR>
 augroup END
