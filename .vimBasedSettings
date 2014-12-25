@@ -36,10 +36,11 @@ set nocursorline
 set nocursorcolumn
 set clipboard+=unnamed
 set wildmode=list:longest
+set noeb vb t_vb= " no beep sound
 
 " created template
-" autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
-" autocmd BufNewFile *.html 0r $HOME/dotfiles/.vimTemplates/template.html
+autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
+autocmd BufNewFile *.html 0r $HOME/dotfiles/.vimTemplates/template.html
 
 " netrw's style is liststyle
 let g:netrw_liststyle=3
