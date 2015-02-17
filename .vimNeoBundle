@@ -44,6 +44,27 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'rompetroll/vim-scalariform'
+NeoBundleLazy 'supermomonga/jazzradio.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
+if neobundle#tap('jazzradio.vim')
+  call neobundle#config({
+        \   'autoload' : {
+        \     'unite_sources' : [
+        \       'jazzradio'
+        \     ],
+        \     'commands' : [
+        \       'JazzradioUpdateChannels',
+        \       'JazzradioStop',
+        \       {
+        \         'name' : 'JazzradioPlay',
+        \         'complete' : 'customlist,jazzradio#channel_key_complete'
+        \       }
+        \     ],
+        \     'function_prefix' : 'jazzradio'
+        \   }
+        \ })
+endif
 
 " if_luaが有効ならneocompleteを使う
 NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
