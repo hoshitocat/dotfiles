@@ -1,8 +1,5 @@
 # Created by newuser for 4.3.17
 
-# gitのブランチをプロンプトに表示するための機能を読み込む
-source ~/dotfiles/git-prompt.sh
-
 # zshの補完機能
 autoload -U compinit
 compinit
@@ -14,18 +11,33 @@ colors
 setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
 
-local firstPLine="%F{3}[%~]%f%"'F{1}$(__git_ps1 "[%s]")%f'$'\n'
-local secondPLine="%F{white}%n%f@%F{white}%m%f %% "
+# 左プロンプトの設定
+local firstPLine="%F{202}%n%f %F{255}at%f %F{178}%m%f %F{255}in%f %F{106}%~%f"
 
+# VCS(Version Control Systems)の情報を取得するzshの便利関数 vcs_infoを使う
+autoload -Uz vcs_info
+# 表示フォーマットの指定
+# %b ブランチ情報
+# %a アクション名(mergeなど)
+# %c ステージング済みが存在するとき表示
+# %u アンステージングが存在するとき表示
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' unstagedstr "%F{226}[*]%f"
+zstyle ':vcs_info:git:*' stagedstr "%F{039}[+]%f"
+zstyle ':vcs_info:*' formats "%F{255}on%f %F{062}%b%f %u%c"
+zstyle ':vcs_info:*' actionformats '%F{062}%b%f%F{255}|%f%F{009}%a%f'
+
+local secondPLine="☆  "
+
+# 右プロンプトの設定
 local firstRPLine="[%D{%y/%m/%d %T}]"
 
 precmd () {
-  PROMPT="$firstPLine$secondPLine"
-  RPROMPT="$firstRPLine"
+  vcs_info
+  PROMPT=$firstPLine' ${vcs_info_msg_0_}'$'\n'$secondPLine
+  RPROMPT=$firstRPLine
 }
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWUPSTREAM="auto"
-GIT_PS1_SHOWCOLORHINTS=1
 
 # cdr
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
