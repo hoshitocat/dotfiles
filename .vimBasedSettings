@@ -30,10 +30,10 @@ set backspace=start,eol,indent
 set t_ut= " tmux start vim color 
 set t_Co=256 " tmux start vim color
 set list "visualization spaces and line breaks
-set nocursorline
-" set colorcolumn=
-" highlight ColorColumn ctermbg=6
-set nocursorcolumn
+set cursorline
+set colorcolumn=
+highlight ColorColumn ctermbg=6
+set cursorcolumn
 set clipboard+=unnamed
 set wildmode=list:longest
 set noeb vb t_vb= " no beep sound

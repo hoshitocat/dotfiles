@@ -13,4 +13,4 @@ CURSOR=$#BUFFER
 zle clear-screen
 }
 zle -N peco-select-history
-bindkey '^r' peco-select-history
+bindkey '^x' peco-select-history
