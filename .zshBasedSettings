@@ -59,8 +59,22 @@ alias rm="rm -i"
 alias grep="grep --color -n"
 
 # viコマンドでもvimが起動する
-alias vim="/Applications/MacVim.app/Contents/MacOS/mvim"
 alias vi="/Applications/MacVim.app/Contents/MacOS/mvim -v"
+# vimコマンドでmacvimを起動(起動中の場合newtabで開く)
+case ${OSTYPE} in
+darwin*) # Mac OS X
+  function macvim () {
+    if [ -d /Applications/MacVim.app ]
+    then
+      [ ! -f $1 ] && touch $1
+      Open -a MacVim.app $1
+    else
+      vi $1
+    fi
+  }
+  alias vim='macvim'
+  ;;
+esac
 
 # history
 export HISTFILE=${HOME}/.zsh_history
@@ -69,3 +83,4 @@ export SAVEHIST=100000
 
 # zsh doesn't classify uppercase and lowercase.
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+

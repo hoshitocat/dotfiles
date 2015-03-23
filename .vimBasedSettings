@@ -15,6 +15,7 @@ colorscheme jellybeans_custom "setting colorscheme
 syntax on
 filetype indent plugin on
 
+set nobackup
 set number "line number
 set expandtab "change to blanks tab character
 set tabstop=2 "tab is two blanks
