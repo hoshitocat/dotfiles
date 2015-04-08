@@ -1,0 +1,17 @@
+set transparency=10
+set columns=100
+set lines=50
+set nobackup
+set imdisable
+set guifont=Ricty:h12
+set guioptions=eg
+" e is smart tab bar
+" I don't know what g mean...orz
+" m is menubar
+" T is toolbar
+" r and R is right scrollbar
+" l and L is left scrollbar
+" b is bottom scrollbar
+
+colorscheme jellybeans_custom
+
