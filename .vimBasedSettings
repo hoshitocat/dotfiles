@@ -31,10 +31,10 @@ set backspace=start,eol,indent
 set t_ut= " tmux start vim color 
 set t_Co=256 " tmux start vim color
 set list "visualization spaces and line breaks
-set cursorline
-set colorcolumn=
-highlight ColorColumn ctermbg=6
-set cursorcolumn
+set nocursorline
+set nocursorcolumn
+" set colorcolumn=
+" highlight ColorColumn ctermbg=6
 set clipboard+=unnamed
 set wildmode=list:longest
 set nosmartcase " If a pattern contains an uppercase, override ignorecase options.

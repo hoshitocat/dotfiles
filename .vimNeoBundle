@@ -19,14 +19,29 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
+NeoBundle 'aharisu/vim_goshrepl' "LiSP系
+NeoBundle 'aharisu/vim-gdev' "LiSP系
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'cohama/agit.vim'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'int3/vim-extradite'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'rompetroll/vim-scalariform'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tyru/caw.vim'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tyru/caw.vim'
-NeoBundle 'tpope/vim-surround' 
+NeoBundle 'Yggdroot/indentLine'
+
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \ 'windows' : 'make -f make_mingw32.mak',
@@ -35,18 +50,8 @@ NeoBundle 'Shougo/vimproc', {
       \ 'unix' : 'make -f make_unix.mak',
       \ },
       \ }
-NeoBundle 'aharisu/vim_goshrepl' "LiSP系
-NeoBundle 'aharisu/vim-gdev' "LiSP系
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'rompetroll/vim-scalariform'
-NeoBundle 'airblade/vim-gitgutter'
+
+" jazzradio.vim
 NeoBundleLazy 'supermomonga/jazzradio.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
 if neobundle#tap('jazzradio.vim')
   call neobundle#config({
