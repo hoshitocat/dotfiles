@@ -38,6 +38,7 @@ set nocursorcolumn
 set clipboard+=unnamed
 set wildmode=list:longest
 set nosmartcase " If a pattern contains an uppercase, override ignorecase options.
+set wildignorecase
 set noeb vb t_vb= " no beep sound
 
 " created template

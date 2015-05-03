@@ -1,9 +1,11 @@
-set transparency=10
+" set transparency=10 # Only OS X Setting
 set columns=100
 set lines=50
+set clipboard=unnamed
 set nobackup
 set imdisable
-set guifont=Ricty:h12
+" set guifont=Ricty:10 " OS X Setting
+set guifont=Ricty\ 10
 set guioptions=eg
 " e is smart tab bar
 " I don't know what g mean...orz
