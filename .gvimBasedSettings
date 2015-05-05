@@ -12,6 +12,7 @@ set guioptions=eg
 " r and R is right scrollbar
 " l and L is left scrollbar
 " b is bottom scrollbar
+set nocursorline
 
 colorscheme jellybeans_custom
 
