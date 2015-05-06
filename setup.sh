@@ -6,4 +6,4 @@ cp .zshenv           ~/
 cp .zshrc            ~/
 git config --global core.excludesfile "~/.gitignore_global"
 
-echo "Finished !!!!!"
+echo "Make a copy completed"

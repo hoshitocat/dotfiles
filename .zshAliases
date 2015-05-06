@@ -1,5 +1,10 @@
 # lsで表示されるカラーを変更
-alias ls="ls -G"
+case ${OSTYPE} in
+  linux-gnu*)
+    alias ls="ls --color";;
+  darwin*) # OS X
+    alias ls="ls -G";;
+esac
 
 # rm関係の設定
 alias rm="rm -i"
@@ -7,23 +12,45 @@ alias rm="rm -i"
 # grep match color text
 alias grep="grep --color -n"
 
-# viコマンドでもvimが起動する
-alias vi="/Applications/MacVim.app/Contents/MacOS/mvim -v"
 # vimコマンドでmacvimを起動(起動中の場合newtabで開く)
 case ${OSTYPE} in
-darwin*) # Mac OS X
-  function macvim () {
-    if [ -d /Applications/MacVim.app ]
-    then
-      [ ! -f $1 ] && touch $1
-      Open -a MacVim.app $1
-    else
-      vi $1
-    fi
-  }
-  alias vim='macvim'
-  ;;
+  darwin*) # Mac OS X
+    alias ctags="`brew --prefix`/bin/ctags"
+    alias vi="/Applications/MacVim.app/Contents/MacOS/mvim -v"
+    alias ctags="`brew --prefix`/bin/ctags"
+    alias postgresql-start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+    alias postgresql-stop="pg_ctl -D /usr/local/var/postgres -s -m fast"
+    alias wireshark="/usr/local/Cellar/wireshark/1.12.1/bin/wireshark-qt"
+    alias mvim='/Applications/MacVim.app/Contents/MacOS/mvim'
+    alias ema='open -a /Applications/Emacs.app'
+    alias emacs='/usr/local/Cellar/emacs/24.4/bin/emacsclient -nw'
+    function macvim () {
+      if [ -d /Applications/MacVim.app ]
+      then
+        [ ! -f $1 ] && touch $1
+        Open -a MacVim.app $1
+      else
+        vi $1
+      fi
+    }
+    alias vim='macvim'
+    ;;
+  linux-gnu*)
+    alias vi="gvim -v"
+    function runGvim() {
+      if [ -f /usr/bin/gvim ]
+      then
+        if pgrep "gvim" > /dev/null
+        then
+          [ ! -f $1 ] && touch $1
+          gvim --servername GVIM --remote-tab $1
+        else
+          gvim $1
+        fi
+      else
+        vi $1
+      fi
+    }
+    alias vim="runGvim"
+    ;;
 esac
-
-# ctags alias
-alias ctags="`brew --prefix`/bin/ctags"
