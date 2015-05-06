@@ -1,0 +1,12 @@
+# Ignore the .DS_Store
+.DS_Store
+
+# vim backup files
+.*.swp
+
+# rbenv local setting file
+.ruby-version
+
+# tags file(using vim tag jump)
+# NOTE: this is file!!!
+tags
