@@ -3,6 +3,7 @@
 
 # vim backup files
 .*.swp
+.*.swo
 
 # rbenv local setting file
 .ruby-version
