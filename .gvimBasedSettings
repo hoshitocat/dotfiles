@@ -1,4 +1,4 @@
-" set transparency=10 # Only OS X Setting
+set transparency=10 # Only OS X Setting
 set columns=100
 set lines=50
 set clipboard=unnamed
