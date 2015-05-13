@@ -28,7 +28,7 @@ case ${OSTYPE} in
       if [ -d /Applications/MacVim.app ]
       then
         [ ! -f $1 ] && touch $1
-        Open -a MacVim.app $1
+        Open -a MacVim.app ./$1
       else
         vi $1
       fi
