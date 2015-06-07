@@ -19,8 +19,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'aharisu/vim_goshrepl' "LiSP系
 NeoBundle 'aharisu/vim-gdev' "LiSP系
+NeoBundle 'aharisu/vim_goshrepl' "LiSP系
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'cohama/agit.vim'
 NeoBundle 'derekwyatt/vim-scala'
@@ -32,15 +32,16 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'rompetroll/vim-scalariform'
 NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tpope/vim-surround'
+NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell'
 NeoBundle 'Yggdroot/indentLine'
 
 NeoBundle 'Shougo/vimproc', {
