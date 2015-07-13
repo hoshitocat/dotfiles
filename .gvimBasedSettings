@@ -4,7 +4,7 @@ set lines=60
 set clipboard=unnamed
 set nobackup
 set imdisable
-set linespace=2
+set linespace=4
 set guifont=Ricty:7 " OS X Setting
 " set guifont=Ricty\ 10
 set guioptions=eg
