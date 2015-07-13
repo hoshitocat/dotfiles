@@ -24,6 +24,7 @@ NeoBundle 'aharisu/vim_goshrepl' "LiSP系
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'cohama/agit.vim'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'int3/vim-extradite'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'kchmck/vim-coffee-script'
