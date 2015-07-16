@@ -1,11 +1,11 @@
 set transparency=10 " Only OS X Setting
-set columns=100
-set lines=60
+set columns=150
+set lines=50
 set clipboard=unnamed
 set nobackup
 set imdisable
 set linespace=4
-set guifont=Ricty:h12 " OS X Setting
+set guifont=Ricty\ for\ Powerline:h12 " OS X Setting
 " set guifont=Ricty\ 10
 set guioptions=eg
 " e is smart tab bar
@@ -18,6 +18,8 @@ set guioptions=eg
 colorscheme jellybeans_custom
 
 set cursorline
-highlight CursorLine guibg=#222222
+highlight CursorLine guibg=#333333
 highlight CursorLineNr guifg=yellow guibg=black gui=bold
 
+set cmdheight=1 " command line buffer height
+set laststatus=2 " status line position

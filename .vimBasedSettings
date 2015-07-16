@@ -15,7 +15,7 @@ colorscheme jellybeans_custom "setting colorscheme
 
 syntax on
 
-set cursorline
+set nocursorline " ターミナルVimだと遅くなる
 highlight CursorLine cterm=none ctermbg=235
 highlight CursorLineNr cterm=bold ctermfg=yellow ctermbg=0
 
@@ -45,9 +45,12 @@ set wildmode=list:longest
 set nosmartcase " If a pattern contains an uppercase, override ignorecase options.
 set wildignorecase
 set noeb vb t_vb= " no beep sound
+set cmdheight=1 " command line buffer height
+set laststatus=2 " status line position
 
 " created template
 autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
 
 " netrw's style is liststyle
 let g:netrw_liststyle=3
+
