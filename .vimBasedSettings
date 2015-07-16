@@ -12,7 +12,13 @@ if has('persistent_undo')
 endif
 
 colorscheme jellybeans_custom "setting colorscheme
+
 syntax on
+
+set cursorline
+highlight CursorLine cterm=none ctermbg=235
+highlight CursorLineNr cterm=bold ctermfg=yellow ctermbg=0
+
 filetype indent plugin on
 
 set nobackup
@@ -31,7 +37,6 @@ set backspace=start,eol,indent
 set t_ut= " tmux start vim color 
 set t_Co=256 " tmux start vim color
 set list "visualization spaces and line breaks
-set nocursorline
 set nocursorcolumn
 " set colorcolumn=
 " highlight ColorColumn ctermbg=6
