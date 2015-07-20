@@ -26,15 +26,15 @@ set number "line number
 set expandtab "change to blanks tab character
 set tabstop=2 "tab is two blanks
 set shiftwidth=2 "auto indent is two blanks
-set softtabstop=2 "width for the blanks, the cursor shifts tab 
+set softtabstop=2 "width for the blanks, the cursor shifts tab
 set autoindent "continue to indent a new line
 set smartindent "a new line to increase or decrease the indent
 set ignorecase "not case sensitive when searching
-set listchars=trail:･ " seeing white space
+set listchars=tab:»･,trail:･,eol:↲ " seeing white space
 set title "indicate a title
 set hlsearch "highlight the search result characters
 set backspace=start,eol,indent
-set t_ut= " tmux start vim color 
+set t_ut= " tmux start vim color
 set t_Co=256 " tmux start vim color
 set list "visualization spaces and line breaks
 set nocursorcolumn
