@@ -23,4 +23,3 @@ highlight CursorLineNr guifg=yellow guibg=black gui=bold
 
 set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
-set ambiwidth=double
