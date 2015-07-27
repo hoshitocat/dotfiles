@@ -56,3 +56,7 @@ export SAVEHIST=100000
 # zsh doesn't classify uppercase and lowercase.
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+# 補完時のハイライトとか十字キーで選択移動できる
+autoload -U compinit
+compinit
+zstyle ':completion:*:default' menu select=1
