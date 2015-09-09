@@ -175,3 +175,6 @@ augroup END
 " lightLline.vim
 source ~/dotfiles/.vimStatusLine
 
+" vim-go
+let g:go_fmt_autosave = 0
+
