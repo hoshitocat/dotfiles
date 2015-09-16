@@ -40,7 +40,7 @@ fi
 # adb Android Debug Bridge
 export PATH="${PATH}:${HOME}/Library/Android/sdk/platform-tools"
 
-# set direnv
+# direnv settings
+# direnv is settings each directory
 export EDITOR=vim
 eval "$(direnv hook zsh)"
-

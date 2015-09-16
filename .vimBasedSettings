@@ -41,12 +41,13 @@ set nocursorcolumn
 " set colorcolumn=
 " highlight ColorColumn ctermbg=6
 set clipboard+=unnamed
-set wildmode=list:longest
+set wildmode=list:longest,full
 set nosmartcase " If a pattern contains an uppercase, override ignorecase options.
 set wildignorecase
 set noeb vb t_vb= " no beep sound
 set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
+set pumheight=5 " neocomplete limit displaying
 
 " created template
 autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
