@@ -49,6 +49,7 @@ set noeb vb t_vb= " no beep sound
 set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
 set pumheight=5 " neocomplete limit displaying
+set mouse=v " because cannot use clipboard when mouse=a
 
 " created template
 autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
