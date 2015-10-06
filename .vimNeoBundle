@@ -145,7 +145,8 @@ let g:Tex_FormatDependency_pdf='dvi,pdf'
 let g:Tex_ViewRule_pdf='open -a Preview.app'
 
 " previm
-let g:previm_open_cmd = 'open -a Google\ Chrome'
+let g:previm_open_cmd = 'google-chrome' " Ubuntu
+" let g:previm_open_cmd = 'open -a Google\ Chrome' " MacOSX
 augroup PrevimSettings
   autocmd!
   autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
