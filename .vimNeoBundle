@@ -42,6 +42,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'vim-latex/vim-latex' " Ubuntuで動作確認済み(Macは未確認)
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -134,15 +135,16 @@ vmap <Leader>c <Plug>(caw:i:toggle)$
 
 call neobundle#end()
 
-" Vim-LaTeXの設定
-let tex_flavor='latex'
-set grepprg=grep\ -nH\ $*
+" Vim-LaTeX for Ubuntu
 set shellslash
+set grepprg=grep\ -nH\ $*
+let tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_dvi='platex --interaction=nonstopmode $*'
-let g:Tex_CompileRule_pdf='dvipdfmx $*.dvi'
+let g:Tex_MultipleCompileFormats='dvi,pdf'
 let g:Tex_FormatDependency_pdf='dvi,pdf'
-let g:Tex_ViewRule_pdf='open -a Preview.app'
+let g:Tex_CompileRule_dvi='platex --interaction=nonstopmode $*'
+let g:Tex_CompileRule_pdf='dvipdfm $*.dvi'
+let g:Tex_ViewRule_pdf='evince'
 
 " previm
 let g:previm_open_cmd = 'google-chrome' " Ubuntu
