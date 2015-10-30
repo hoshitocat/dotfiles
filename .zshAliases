@@ -9,6 +9,12 @@ esac
 # rm関係の設定
 alias rm="rm -i"
 
+# mv
+alias mv='mv -i'
+
+# cp
+alias cp='cp -i'
+
 # grep match color text
 alias grep="grep --color -n"
 
