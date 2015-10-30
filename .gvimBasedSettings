@@ -17,7 +17,7 @@ set guioptions=eg
 " b is bottom scrollbar
 colorscheme jellybeans_custom
 
-set cursorline
+set nocursorline
 highlight CursorLine guibg=#333333
 highlight CursorLineNr guifg=yellow guibg=black gui=bold
 
