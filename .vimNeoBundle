@@ -30,6 +30,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'itchyny/landscape.vim'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'othree/html5.vim'
@@ -108,7 +109,7 @@ let g:html5_aria_attributes_complete = 1
 " unite.vim
 let g:unite_enable_start_insert = 1
 let g:unite_enable_split_vertically = 0
-let g:unite_winwidth = 40
+" let g:unite_winwidth = 40
 nmap <Space> [Unite]
 nnoremap [Unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 nnoremap [Unite]m :<C-u>Unite  file_mru <CR>
@@ -178,3 +179,11 @@ source ~/dotfiles/.vimStatusLine
 " vim-go
 let g:go_fmt_autosave = 0
 
+" ctrlp.vim
+let g:ctrlp_map='<C-,>'
+let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_working_path_mode='ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command='find %s -type f'
+nnoremap <C-m> :<C-u>CtrlP<CR>
