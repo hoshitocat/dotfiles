@@ -197,4 +197,6 @@ if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
 nnoremap <Leader>f :<C-u>CtrlP<CR>
+" reload CtrlP index
+nnoremap <Leader>rc :<C-u>CtrlPClearCache<CR>
 
