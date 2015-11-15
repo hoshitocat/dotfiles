@@ -59,6 +59,7 @@ let g:netrw_liststyle=3
 
 " keybind
 nnoremap ; :
+nnoremap : ;
 
 " disabled IME when entered Escape
 function! ImInActivate()
