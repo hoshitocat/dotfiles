@@ -23,5 +23,5 @@ highlight CursorLineNr guifg=yellow guibg=black gui=bold
 
 set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
-set nocursorline " gvim nocursorline
+set cursorline " gvim nocursorline
 set noeb vb t_vb= " no beep sound
