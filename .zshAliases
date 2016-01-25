@@ -22,7 +22,7 @@ alias grep="grep --color -n"
 case ${OSTYPE} in
   darwin*) # Mac OS X
     alias ctags="`brew --prefix`/bin/ctags"
-    alias vi="/usr/local/Cellar/macvim/7.4-84/MacVim.app/Contents/MacOS/Vim -v"
+    alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
     alias ctags="`brew --prefix`/bin/ctags"
     alias postgresql-start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
     alias postgresql-stop="pg_ctl -D /usr/local/var/postgres -s -m fast"

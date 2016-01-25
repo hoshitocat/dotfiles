@@ -136,20 +136,26 @@ vmap <Leader>c <Plug>(caw:i:toggle)$
 
 call neobundle#end()
 
-" Vim-LaTeX for Ubuntu
+" Vim-LaTeX
 set shellslash
 set grepprg=grep\ -nH\ $*
 let tex_flavor='latex'
+let g:Imap_UsePlaceHolders = 1
+let g:Imap_DeleteEmptyPlaceHolders = 1
+let g:Imap_StickyPlaceHolders = 0
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='dvi,pdf'
 let g:Tex_FormatDependency_pdf='dvi,pdf'
 let g:Tex_CompileRule_dvi='platex --interaction=nonstopmode $*'
 let g:Tex_CompileRule_pdf='dvipdfmx $*.dvi'
-let g:Tex_ViewRule_pdf='evince'
+" for Ubuntu
+" let g:Tex_ViewRule_pdf='evince'
+" for Darwin
+let g:Tex_ViewRule_pdf = 'Skim'
 
 " previm
-let g:previm_open_cmd = 'google-chrome' " Ubuntu
-" let g:previm_open_cmd = 'open -a Google\ Chrome' " MacOSX
+" let g:previm_open_cmd = 'google-chrome' " Ubuntu
+let g:previm_open_cmd = 'open -a Google\ Chrome' " MacOSX
 augroup PrevimSettings
   autocmd!
   autocmd BufNewFile,BufRead *.{md,txt,mdwn,mkd,mkdn,mark*} set filetype=markdown
@@ -190,7 +196,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.DS_Store,*/.git/**     " MacOSX/Linu
 set wildignore+=*\\vendor\\**
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](doc|tmp|node_modules|.git|bundle|hg|svn)',
+  \ 'dir':  '\v[\/](tmp|node_modules|.git|bundle|hg|svn)',
   \ 'file': '\v\.(exe|so|dll|o)$',
   \ }
 if exists("g:ctrlp_user_command")
