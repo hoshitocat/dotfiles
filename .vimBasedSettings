@@ -61,10 +61,12 @@ let g:netrw_liststyle=3
 nnoremap ; :
 nnoremap : ;
 
+" Only for Ubuntu
 " disabled IME when entered Escape
-function! ImInActivate()
-  call system('fcitx-remote -c')
-endfunction
-inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
-inoremap <silent> <ESC> <ESC>:call ImInActivate()<CR>
-
+if system("uname -s") == "Linux"
+  function! ImInActivate()
+    call system('fcitx-remote -c')
+  endfunction
+  inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
+  inoremap <silent> <ESC> <ESC>:call ImInActivate()<CR>
+endif

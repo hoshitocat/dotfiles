@@ -24,6 +24,12 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
 fi
 
+# erlenv
+if [ -d ${HOME}/.erlenv ]; then
+  export PATH="$HOME/.erlenv/bin:$PATH"
+  eval "$(erlenv init -)"
+fi
+
 # MySQL Path Setting
 export PATH="/usr/local/mysql/bin:$PATH"
 
