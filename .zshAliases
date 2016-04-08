@@ -18,27 +18,15 @@ alias cp='cp -i'
 # grep match color text
 alias grep="grep --color -n"
 
+# ssh to aws vpc using peco
+alias awls-vpc="aws ec2 describe-instances --filter 'Name=vpc-id,Values=vpc-457e9320' --region ap-southeast-1 --query 'Reservations[*].Instances[*].[State.Name, Tags[?Key==\`Name\`].Value | [0], PrivateIpAddress]' --output text | sed -e 's/running/R/g' | sed -e 's/stopped/S/g' | peco"
+alias awssh-vpc='row=$(awls-vpc); name=$(echo ${row} | cut -f 2); host=$(echo ${row} | cut -f 3); echo "...ssh ${name} (${host})"; ssh -i ~/.ssh/gunosy_aws.pem ryohei_hoshi@${host}'
+
 # vimコマンドでmacvimを起動(起動中の場合newtabで開く)
 case ${OSTYPE} in
   darwin*) # Mac OS X
     alias ctags="`brew --prefix`/bin/ctags"
-    alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
-    alias ctags="`brew --prefix`/bin/ctags"
-    alias postgresql-start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-    alias postgresql-stop="pg_ctl -D /usr/local/var/postgres -s -m fast"
-    alias wireshark="/usr/local/Cellar/wireshark/1.12.1/bin/wireshark-qt"
-    alias ema='open -a /Applications/Emacs.app'
-    alias emacs='/usr/local/Cellar/emacs/24.4/bin/emacsclient -nw'
-    function macvim () {
-      if [ -d /Applications/MacVim.app ]
-      then
-        [ ! -f $1 ] && touch $1
-        Open -a MacVim.app ./$1
-      else
-        vi $1
-      fi
-    }
-    alias vim='macvim'
+    alias vi="vim"
     ;;
   linux-gnu*)
     alias vi="gvim -v"
