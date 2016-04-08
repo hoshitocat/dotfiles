@@ -11,7 +11,7 @@ if has('persistent_undo')
   set undofile
 endif
 
-colorscheme jellybeans_custom "setting colorscheme
+colorscheme solarized "setting colorscheme
 
 syntax on
 
