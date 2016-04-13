@@ -12,7 +12,8 @@ setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
 
 # 左プロンプトの設定
-local firstPLine="%F{202}%n%f %F{255}at%f %F{178}%m%f %F{255}in%f %F{106}%~%f"
+# local firstPLine="%F{202}%n%f %F{255}at%f %F{178}%m%f %F{255}in%f %F{106}%~%f"
+local firstPLine="%F{106}%~%f"
 
 # VCS(Version Control Systems)の情報を取得するzshの便利関数 vcs_infoを使う
 autoload -Uz vcs_info
@@ -28,7 +29,8 @@ zstyle ':vcs_info:git:*' stagedstr "%F{039}[+]%f"
 zstyle ':vcs_info:*' formats "%F{255}on%f %F{062}%b%f %u%c"
 zstyle ':vcs_info:*' actionformats '%F{062}%b%f%F{255}|%f%F{009}%a%f'
 
-local secondPLine="☆  "
+# local secondPLine="☆  "
+local secondPLine="%% "
 
 # 右プロンプトの設定
 local firstRPLine="[%D{%y/%m/%d %T}]"
