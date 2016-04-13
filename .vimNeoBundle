@@ -48,7 +48,6 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-latex/vim-latex' " Ubuntuで動作確認済み(Macは未確認)
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
-NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neosnippet.vim'
@@ -84,18 +83,6 @@ if neobundle#tap('jazzradio.vim')
         \   }
         \ })
 endif
-
-" neocomplete
-let g:neocomplete#force_overwrite_completefunc = 1
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_ignore_case = 1
-let g:neocomplete#enable_smart_case = 1
-if !exists('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns._ = '\h\w*'
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 " indentLine
 let g:indentLine_color_term = 239
