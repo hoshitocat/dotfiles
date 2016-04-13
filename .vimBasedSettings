@@ -11,7 +11,7 @@ if has('persistent_undo')
   set undofile
 endif
 
-colorscheme solarized "setting colorscheme
+colorscheme dracula "setting colorscheme
 
 syntax on
 
