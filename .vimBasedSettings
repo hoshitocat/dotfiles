@@ -20,6 +20,7 @@ set nocursorline " ターミナルVimだと遅くなる
 
 " Visual mode termbg color settings for dracula
 highlight Visual term=reverse ctermbg=240 guibg=#44475a
+highlight Comment term=bold ctermfg=243 guifg=#6272a4
 
 filetype indent plugin on
 
