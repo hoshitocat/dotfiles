@@ -11,13 +11,15 @@ if has('persistent_undo')
   set undofile
 endif
 
+syntax on
 colorscheme dracula "setting colorscheme
 
-syntax on
-
 set nocursorline " ターミナルVimだと遅くなる
-highlight CursorLine cterm=none ctermbg=235
-highlight CursorLineNr cterm=bold ctermfg=yellow ctermbg=0
+" highlight CursorLine cterm=none ctermbg=235
+" highlight CursorLineNr cterm=bold ctermfg=yellow ctermbg=0
+
+" Visual mode termbg color settings for dracula
+highlight Visual term=reverse ctermbg=240 guibg=#44475a
 
 filetype indent plugin on
 
