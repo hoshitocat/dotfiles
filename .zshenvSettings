@@ -17,13 +17,6 @@ if [ -d ${HOME}/.plenv ]; then
   eval "$(plenv init -)"
 fi
 
-# pyenv
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH="${PYENV_ROOT}/bin:$PATH"
-    eval "$(pyenv init -)"
-fi
-
 # erlenv
 if [ -d ${HOME}/.erlenv ]; then
   export PATH="$HOME/.erlenv/bin:$PATH"
