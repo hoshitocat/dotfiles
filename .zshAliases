@@ -26,6 +26,7 @@ alias awssh-vpc='row=$(awls-vpc); name=$(echo ${row} | cut -f 2); host=$(echo ${
 case ${OSTYPE} in
   darwin*) # Mac OS X
     alias ctags="`brew --prefix`/bin/ctags"
+    alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     alias vi="vim"
     ;;
   linux-gnu*)
