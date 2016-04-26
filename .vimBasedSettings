@@ -67,6 +67,9 @@ nnoremap ; :
 nnoremap : ;
 vnoremap ; :
 vnoremap : ;
+" expanded search
+nnoremap / /\v
+nnoremap ? /\v
 
 " Only for Ubuntu
 " disabled IME when entered Escape
