@@ -54,7 +54,10 @@ set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
 set pumheight=5 " neocomplete limit displaying
 set mouse=v " because cannot use clipboard when mouse=a
-set omnifunc=syntaxcomplete#Complete " <C-X> <C-O> vim default complete
+
+" 1. <C-x><C-o>open popup after input char
+" 2. <C-n> or <C-p> matching names are found a pop-up menu opens
+set omnifunc=syntaxcomplete#Complete
 
 " created template
 autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
