@@ -49,6 +49,7 @@ NeoBundle 'vim-latex/vim-latex' " Ubuntuで動作確認済み(Macは未確認)
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -211,6 +212,9 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" vim-jsx
+let g:jsx_ext_required = 0 " JSX in .js enabled syntax & indent
 
 " ColorRoller
 " source ~/dotfiles/vim/color_roller.vim
