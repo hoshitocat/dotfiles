@@ -48,6 +48,8 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'vim-latex/vim-latex' " Ubuntuで動作確認済み(Macは未確認)
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
+NeoBundle 'pangloss/vim-javascript'
+
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neosnippet.vim'
