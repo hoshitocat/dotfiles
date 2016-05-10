@@ -215,6 +215,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " vim-jsx
 let g:jsx_ext_required = 0 " JSX in .js enabled syntax & indent
+au BufNewFile,BufRead *.es6.jsx set filetype=javascript.jsx
 
 " ColorRoller
 " source ~/dotfiles/vim/color_roller.vim
