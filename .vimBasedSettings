@@ -34,13 +34,14 @@ set softtabstop=2 "width for the blanks, the cursor shifts tab
 set autoindent "continue to indent a new line
 set smartindent "a new line to increase or decrease the indent
 set ignorecase "not case sensitive when searching
-set listchars=tab:»･,trail:･,eol:↲ " seeing white space
+set list "visualization spaces and line breaks
+" set listchars=tab:»･,trail:･,eol:↲ " seeing white space
+set listchars=tab:\ \ ,trail:･,eol:↲ " seeing white space
 set title "indicate a title
 set hlsearch "highlight the search result characters
 set backspace=start,eol,indent
 set t_ut= " tmux start vim color
 set t_Co=256 " tmux start vim color
-set list "visualization spaces and line breaks
 set nocursorcolumn
 set nocursorline
 " set colorcolumn=
