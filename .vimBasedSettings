@@ -60,6 +60,9 @@ set mouse=v " because cannot use clipboard when mouse=a
 " 2. <C-n> or <C-p> matching names are found a pop-up menu opens
 set omnifunc=syntaxcomplete#Complete
 
+" undo-persistence
+set undodir=~/.vim/.vimundo
+
 " created template
 autocmd BufNewFile *.tex 0r $HOME/dotfiles/.vimTemplates/template.tex
 
