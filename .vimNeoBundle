@@ -24,7 +24,6 @@ NeoBundle 'aharisu/vim_goshrepl' "LiSP系
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'cohama/agit.vim'
 NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'fatih/vim-go'
 NeoBundle 'int3/vim-extradite'
 NeoBundle 'itchyny/landscape.vim'
 NeoBundle 'itchyny/lightline.vim'
@@ -184,9 +183,6 @@ augroup END
 
 " lightLline.vim
 source ~/dotfiles/.vimStatusLine
-
-" vim-go
-let g:go_fmt_autosave = 0
 
 " ctrlp.vim
 let g:ctrlp_map='<C-,>'
