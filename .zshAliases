@@ -18,6 +18,9 @@ alias cp='cp -i'
 # grep match color text
 alias grep="grep --color -n"
 
+# brew doctor warning
+alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:?/} brew"
+
 # ssh to aws vpc using peco
 # alias awls-vpc="aws ec2 describe-instances --filter 'Name=vpc-id,Values=vpc-457e9320' --region ap-southeast-1 --query 'Reservations[*].Instances[*].[State.Name, Tags[?Key==\`Name\`].Value | [0], PrivateIpAddress]' --output text | sed -e 's/running/R/g' | sed -e 's/stopped/S/g' | peco"
 alias awls-vpc="aws ec2 describe-instances --region ap-northeast-1 --query 'Reservations[*].Instances[*].[State.Name, Tags[?Key==\`Name\`].Value | [0], PrivateIpAddress]' --output text | sed -e 's/running/R/g' | sed -e 's/stopped/S/g' | peco"
