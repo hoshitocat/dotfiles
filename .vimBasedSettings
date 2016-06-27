@@ -78,12 +78,3 @@ vnoremap : ;
 nnoremap / /\v
 nnoremap ? /\v
 
-" Only for Ubuntu
-" disabled IME when entered Escape
-if system("uname -s") == "Linux"
-  function! ImInActivate()
-    call system('fcitx-remote -c')
-  endfunction
-  inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
-  inoremap <silent> <ESC> <ESC>:call ImInActivate()<CR>
-endif
