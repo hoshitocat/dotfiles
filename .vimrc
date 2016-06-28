@@ -14,11 +14,14 @@ call dein#begin(expand('~/.vim/deins'))
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('kien/ctrlp.vim')
 call dein#add('Shougo/unite.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/landscape.vim')
 call dein#add('itchyny/lightline.vim')
+call dein#add('kien/ctrlp.vim')
+call dein#add('mxw/vim-jsx')
+call dein#add('pangloss/vim-javascript')
+call dein#add('tpope/vim-fugitive')
 
 " You can specify revision/branch/tag.
 " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -79,6 +82,7 @@ vnoremap ; :
 vnoremap : ;
 
 let g:netrw_liststyle=3
+let mapleader=','
 
 " unite.vim
 let g:unite_enable_start_insert = 1
