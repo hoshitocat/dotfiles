@@ -25,6 +25,7 @@ call dein#add('kien/ctrlp.vim')
 call dein#add('mxw/vim-jsx')
 call dein#add('pangloss/vim-javascript')
 call dein#add('slim-template/vim-slim')
+call dein#add('tpope/vim-commentary')
 call dein#add('tpope/vim-fugitive')
 call dein#add('vim-jp/vim-go-extra')
 
