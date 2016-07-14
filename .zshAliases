@@ -1,27 +1,10 @@
-# lsで表示されるカラーを変更
-case ${OSTYPE} in
-  linux-gnu*)
-    alias ls="ls --color";;
-  darwin*) # OS X
-    alias ls="ls -G";;
-esac
-
-# rm関係の設定
+alias ls="ls -G"
 alias rm="rm -i"
-
-# mv
 alias mv='mv -i'
-
-# cp
 alias cp='cp -i'
-
-# grep match color text
 alias grep="grep --color -n"
-
-# brew doctor warning
+alias ag='ag --hidden -i'
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:?/} brew"
-
-# update db for locate
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 
 # ssh to aws vpc using peco
