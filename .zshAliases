@@ -10,7 +10,7 @@ alias updatedb='sudo /usr/libexec/locate.updatedb'
 # alias awls-vpc="aws ec2 describe-instances --filter 'Name=vpc-id,Values=vpc-457e9320' --region ap-southeast-1 --query 'Reservations[*].Instances[*].[State.Name, Tags[?Key==\`Name\`].Value | [0], PrivateIpAddress]' --output text | sed -e 's/running/R/g' | sed -e 's/stopped/S/g' | peco"
 alias awls-vpc="aws ec2 describe-instances --region ap-northeast-1 --query 'Reservations[*].Instances[*].[State.Name, Tags[?Key==\`Name\`].Value | [0], PrivateIpAddress]' --output text | sed -e 's/running/R/g' | sed -e 's/stopped/S/g' | peco"
 alias awssh-vpc='row=$(awls-vpc); name=$(echo ${row} | cut -f 2); host=$(echo ${row} | cut -f 3); echo "...ssh ${name} (${host})"; ssh -i ~/.ssh/gunosy_aws.pem ryohei_hoshi@${host}'
-alias rh='aws ec2 describe-instances --region ap-northeast-1 --query '"'"'Reservations[*].Instances[*].[State.Name, Tags[?Key==`Name`].Value | [0], PrivateIpAddress]'"'"' --output text | sed -e '"'"'/stopped/d'"'"' | awk '"'"'{printf "%-15s %s\n",$5,$4}'"'"' | sudo tee /etc/hosts > /dev/null && sudo sh -c '"'"'echo "127.0.0.1 localhost" >> /etc/hosts'"'"
+alias fetch-hosts='aws ec2 describe-instances --region ap-northeast-1 --query '"'"'Reservations[*].Instances[*].[State.Name, Tags[?Key==`Name`].Value | [0], PrivateIpAddress]'"'"' --output text | awk '"'"'{printf "%-15s %s\n",$5,$4}'"'"' | sudo tee /etc/hosts > /dev/null && sudo sh -c '"'"'echo "127.0.0.1 localhost" >> /etc/hosts'"'"
 
 # vimコマンドでmacvimを起動(起動中の場合newtabで開く)
 case ${OSTYPE} in
