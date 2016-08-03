@@ -14,20 +14,7 @@ call dein#begin(expand('~/.vim/deins'))
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('Shougo/unite.vim')
-call dein#add('airblade/vim-gitgutter')
-call dein#add('davidhalter/jedi-vim')
-call dein#add('fatih/vim-go')
-call dein#add('itchyny/landscape.vim')
-call dein#add('itchyny/lightline.vim')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('kien/ctrlp.vim')
-call dein#add('mxw/vim-jsx')
-call dein#add('pangloss/vim-javascript')
-call dein#add('slim-template/vim-slim')
-call dein#add('tpope/vim-commentary')
-call dein#add('tpope/vim-fugitive')
-call dein#add('vim-jp/vim-go-extra')
+source ~/dotfiles/vimrc/deins.vim
 
 " You can specify revision/branch/tag.
 " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -92,19 +79,15 @@ let mapleader=','
 
 " unite.vim
 source ~/dotfiles/vimrc/unite.vim
-
 " ctrlp.vim
 source ~/dotfiles/vimrc/ctrlp.vim
-
 " gitgutter
 source ~/dotfiles/vimrc/vim-gitgutter.vim
-
 " lightline.vim
 source ~/dotfiles/vimrc/lightline.vim
-
 " jedi for python
 source ~/dotfiles/vimrc/jedi-vim.vim
-
 " vim-go
 source ~/dotfiles/vimrc/vim-go.vim
-
+" syntastic
+source ~/dotfiles/vimrc/syntastic.vim
