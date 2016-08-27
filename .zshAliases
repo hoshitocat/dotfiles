@@ -12,29 +12,7 @@ alias awls-vpc="aws ec2 describe-instances --region ap-northeast-1 --query 'Rese
 alias awssh-vpc='row=$(awls-vpc); name=$(echo ${row} | cut -f 2); host=$(echo ${row} | cut -f 3); echo "...ssh ${name} (${host})"; ssh -i ~/.ssh/gunosy_aws.pem ryohei_hoshi@${host}'
 alias fetch-hosts='aws ec2 describe-instances --region ap-northeast-1 --query '"'"'Reservations[*].Instances[*].[State.Name, Tags[?Key==`Name`].Value | [0], PrivateIpAddress]'"'"' --output text | awk '"'"'{printf "%-15s %s\n",$5,$4}'"'"' | sudo tee /etc/hosts > /dev/null && sudo sh -c '"'"'echo "127.0.0.1 localhost" >> /etc/hosts'"'"
 
-# vimコマンドでmacvimを起動(起動中の場合newtabで開く)
-case ${OSTYPE} in
-  darwin*) # Mac OS X
-    alias ctags="`brew --prefix`/bin/ctags"
-    alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-    alias vi="vim"
-    ;;
-  linux-gnu*)
-    alias vi="gvim -v"
-    function runGvim() {
-      if [ -f /usr/bin/gvim ]
-      then
-        if pgrep "gvim" > /dev/null
-        then
-          [ ! -f $1 ] && touch $1
-          gvim --servername GVIM --remote-tab $1
-        else
-          gvim $1
-        fi
-      else
-        vi $1
-      fi
-    }
-    alias vim="runGvim"
-    ;;
-esac
+alias ctags="`brew --prefix`/bin/ctags"
+alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias gvim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/gvim "$@"'
+alias vi="vim"
