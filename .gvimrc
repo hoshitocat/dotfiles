@@ -1,3 +1,5 @@
+colorscheme jellybeans_custom
+
 set transparency=15 " Only OS X Setting
 set columns=150
 set lines=50
@@ -14,8 +16,8 @@ set guioptions=eg
 " r and R is right scrollbar
 " l and L is left scrollbar
 " b is bottom scrollbar
-highlight CursorLine guibg=#333333
-highlight CursorLineNr guifg=yellow guibg=black gui=bold
+highlight CursorLine gui=underline guibg=#333333
+highlight CursorLineNr gui=underline guifg=yellow guibg=#333333
 
 set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
