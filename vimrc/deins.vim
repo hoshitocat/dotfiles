@@ -26,10 +26,10 @@ call dein#add('mxw/vim-jsx')
 call dein#add('pangloss/vim-javascript')
 call dein#add('scrooloose/syntastic')
 call dein#add('slim-template/vim-slim')
+call dein#add('suan/vim-instant-markdown') " need to run `$ npm -g install instant-markdown-d`
 call dein#add('thinca/vim-qfreplace')
 call dein#add('tpope/vim-commentary')
 call dein#add('tpope/vim-fugitive')
-call dein#add('vim-jp/vim-go-extra')
 
 " You can specify revision/branch/tag.
 " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
