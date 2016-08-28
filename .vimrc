@@ -1,6 +1,6 @@
 source ~/dotfiles/vimrc/deins.vim
 
-colorscheme wuye
+source ~/dotfiles/vimrc/wuye.vim
 
 if has('persistent_undo')
   set undodir=~/.vim/.vimundo
