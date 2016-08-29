@@ -15,6 +15,7 @@ call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
 call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimshell.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('davidhalter/jedi-vim')
 call dein#add('dracula/vim')
