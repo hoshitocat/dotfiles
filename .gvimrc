@@ -22,3 +22,4 @@ highlight CursorLineNr gui=underline guifg=yellow
 set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
 set noeb vb t_vb= " no beep sound
+set shell=/usr/local/bin/bash
