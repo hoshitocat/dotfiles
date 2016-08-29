@@ -1,6 +1,6 @@
 source ~/dotfiles/vimrc/deins.vim
 
-source ~/dotfiles/vimrc/wuye.vim
+colorscheme jellybeans_custom
 
 if has('persistent_undo')
   set undodir=~/.vim/.vimundo

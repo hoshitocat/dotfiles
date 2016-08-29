@@ -17,6 +17,7 @@ call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/unite.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('davidhalter/jedi-vim')
+call dein#add('dracula/vim')
 call dein#add('fatih/vim-go')
 call dein#add('itchyny/landscape.vim')
 call dein#add('itchyny/lightline.vim')
@@ -30,6 +31,7 @@ call dein#add('suan/vim-instant-markdown') " need to run `$ npm -g install insta
 call dein#add('thinca/vim-qfreplace')
 call dein#add('tpope/vim-commentary')
 call dein#add('tpope/vim-fugitive')
+call dein#add('vim-scripts/WuYe')
 
 " You can specify revision/branch/tag.
 " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
