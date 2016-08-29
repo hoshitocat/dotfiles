@@ -23,3 +23,13 @@ set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
 set noeb vb t_vb= " no beep sound
 set shell=/usr/local/bin/bash
+
+nnoremap <D-u> :<C-u>call ToggleTransparency()<CR>
+
+function! ToggleTransparency()
+  if &transparency == 0
+    set transparency=20
+  else
+    set transparency=0
+  endif
+endfunction
