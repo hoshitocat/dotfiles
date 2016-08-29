@@ -37,6 +37,9 @@ set pumheight=5
 set omnifunc=syntaxcomplete#Complete
 set lazyredraw
 
+highlight CursorLine cterm=underline
+highlight CursorLineNr cterm=underline ctermfg=yellow
+
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :
