@@ -25,7 +25,7 @@ set hlsearch
 set backspace=start,eol,indent
 set t_ut=
 set t_Co=256
-set cursorline
+set nocursorline
 set clipboard+=unnamed
 set wildmode=list:longest,full
 set nosmartcase
@@ -35,10 +35,10 @@ set cmdheight=1
 set laststatus=2
 set pumheight=5
 set omnifunc=syntaxcomplete#Complete
-set lazyredraw
+" set lazyredraw
 
-highlight CursorLine cterm=underline
-highlight CursorLineNr cterm=underline ctermfg=yellow
+" highlight CursorLine cterm=underline
+" highlight CursorLineNr cterm=underline ctermfg=yellow
 
 nnoremap ; :
 nnoremap : ;
