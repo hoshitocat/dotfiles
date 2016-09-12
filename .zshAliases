@@ -17,4 +17,4 @@ alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias gvim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/gvim "$@"'
 alias vi="vim"
 
-alias avocad-redshift='ipaddr=$(netstat avocad-logs02.cw5geusvtlwl.ap-northeast-1.redshift.amazonaws.com | ag 5439 | awk '"'"'{print $5}'"'"' | cut -d "." -f 1,2,3,4); psql -h $ipaddr -U analysis -d adlog -p 5439'
+alias avocad-redshift='ipaddr=$(ssh  -i ~/.ssh/gunosy_aws.pem ryohei_hoshi@ads-admin-web1 '"'"'dig +short avocad-logs02.cw5geusvtlwl.ap-northeast-1.redshift.amazonaws.com | sed -n 2P'"'"'); psql -h $ipaddr -U analysis -d adlog -p 5439'
