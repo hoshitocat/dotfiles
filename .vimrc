@@ -40,9 +40,6 @@ set pumheight=5
 set omnifunc=syntaxcomplete#Complete
 " set lazyredraw
 
-highlight CursorLine cterm=underline
-highlight CursorLineNr cterm=underline ctermfg=yellow
-
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :
@@ -50,6 +47,8 @@ vnoremap : ;
 
 colorscheme wuye
 " colorscheme jellybeans_custom
+highlight CursorLine cterm=underline
+highlight CursorLineNr cterm=underline ctermfg=yellow
 
 let g:netrw_liststyle=3
 let mapleader=','

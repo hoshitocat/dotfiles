@@ -14,8 +14,6 @@ set guioptions=eg
 " r and R is right scrollbar
 " l and L is left scrollbar
 " b is bottom scrollbar
-highlight CursorLine gui=underline
-highlight CursorLineNr gui=underline guifg=yellow
 set cursorline
 
 set cmdheight=1 " command line buffer height
@@ -35,3 +33,5 @@ endfunction
 
 colorscheme wuye
 " colorscheme jellybeans_custom
+highlight CursorLine gui=underline
+highlight CursorLineNr gui=underline guifg=yellow
