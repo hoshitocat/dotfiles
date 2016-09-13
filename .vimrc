@@ -1,6 +1,9 @@
-source ~/dotfiles/vimrc/deins.vim
+syntax on
+filetype on
+filetype indent on
+filetype plugin on
 
-colorscheme jellybeans_custom
+source ~/dotfiles/vimrc/deins.vim
 
 if has('persistent_undo')
   set undodir=~/.vim/.vimundo
@@ -25,7 +28,7 @@ set hlsearch
 set backspace=start,eol,indent
 set t_ut=
 set t_Co=256
-set nocursorline
+set cursorline
 set clipboard+=unnamed
 set wildmode=list:longest,full
 set nosmartcase
@@ -37,13 +40,16 @@ set pumheight=5
 set omnifunc=syntaxcomplete#Complete
 " set lazyredraw
 
-" highlight CursorLine cterm=underline
-" highlight CursorLineNr cterm=underline ctermfg=yellow
+highlight CursorLine cterm=underline
+highlight CursorLineNr cterm=underline ctermfg=yellow
 
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :
 vnoremap : ;
+
+colorscheme wuye
+" colorscheme jellybeans_custom
 
 let g:netrw_liststyle=3
 let mapleader=','
