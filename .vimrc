@@ -1,9 +1,9 @@
+source ~/dotfiles/vimrc/deins.vim
+
 syntax on
 filetype on
 filetype indent on
 filetype plugin on
-
-source ~/dotfiles/vimrc/deins.vim
 
 if has('persistent_undo')
   set undodir=~/.vim/.vimundo
@@ -45,11 +45,6 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
-colorscheme wuye
-" colorscheme jellybeans_custom
-" highlight CursorLine cterm=underline
-" highlight CursorLineNr cterm=underline ctermfg=yellow
-
 let g:netrw_liststyle=3
 let mapleader=','
 
@@ -67,3 +62,8 @@ source ~/dotfiles/vimrc/jedi-vim.vim
 source ~/dotfiles/vimrc/vim-go.vim
 " syntastic
 source ~/dotfiles/vimrc/syntastic.vim
+
+colorscheme wuye
+" colorscheme jellybeans_custom
+" highlight CursorLine cterm=underline
+" highlight CursorLineNr cterm=underline ctermfg=yellow
