@@ -33,5 +33,4 @@ endfunction
 
 colorscheme wuye
 " colorscheme jellybeans_custom
-highlight CursorLine gui=underline
-highlight CursorLineNr gui=underline guifg=yellow
+highlight CursorLineNr guifg=yellow
