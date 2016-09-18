@@ -31,6 +31,6 @@ function! ToggleTransparency()
   endif
 endfunction
 
-colorscheme wuye
-" colorscheme jellybeans_custom
-highlight CursorLineNr guifg=yellow
+" colorscheme wuye
+" highlight CursorLineNr guifg=yellow
+colorscheme jellybeans_custom

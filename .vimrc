@@ -63,7 +63,7 @@ source ~/dotfiles/vimrc/vim-go.vim
 " syntastic
 source ~/dotfiles/vimrc/syntastic.vim
 
-colorscheme wuye
-" colorscheme jellybeans_custom
+" colorscheme wuye
 " highlight CursorLine cterm=underline
 " highlight CursorLineNr cterm=underline ctermfg=yellow
+colorscheme jellybeans_custom
