@@ -63,6 +63,9 @@ source ~/dotfiles/vimrc/vim-go.vim
 " syntastic
 source ~/dotfiles/vimrc/syntastic.vim
 
+" vim-markdown
+source ~/dotfiles/vimrc/vim-markdown.vim
+
 " colorscheme wuye
 " highlight CursorLine cterm=underline
 " highlight CursorLineNr cterm=underline ctermfg=yellow
