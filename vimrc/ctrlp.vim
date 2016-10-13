@@ -2,6 +2,7 @@ let g:ctrlp_map='<C-,>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_user_command='find %s -type f'
+let g:ctrlp_show_hidden = 1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.DS_Store,*/.git/**     " MacOSX/Linux
 set wildignore+=*\\vendor\\**
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
