@@ -11,3 +11,6 @@
 # tags file(using vim tag jump)
 # NOTE: this is file!!!
 tags
+
+# Ignore local gems
+/vendor/bundle/**
