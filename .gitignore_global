@@ -13,4 +13,8 @@
 tags
 
 # Ignore local gems
-/vendor/bundle/**
+vendor/bundle/**
+.bundle/**
+
+# Ignore redis backup data
+dump.rdb
