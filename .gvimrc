@@ -1,4 +1,4 @@
-set columns=150
+set columns=100
 set lines=50
 set clipboard=unnamed
 set nobackup
