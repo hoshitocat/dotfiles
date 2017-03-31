@@ -8,7 +8,7 @@ alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias ctags="`brew --prefix`/bin/ctags"
 alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
 alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-alias gvim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/gvim "$@"'
+alias gvim='vim -g'
 alias vi="vim"
 alias postgresql.start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias postgresql.stop='pg_ctl -D /usr/local/var/postgres stop'
