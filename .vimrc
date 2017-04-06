@@ -60,8 +60,6 @@ source ~/dotfiles/vimrc/lightline.vim
 source ~/dotfiles/vimrc/jedi-vim.vim
 " vim-go
 source ~/dotfiles/vimrc/vim-go.vim
-" syntastic
-source ~/dotfiles/vimrc/syntastic.vim
 
 " vim-markdown
 source ~/dotfiles/vimrc/vim-markdown.vim
