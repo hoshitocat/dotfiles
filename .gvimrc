@@ -32,4 +32,5 @@ endfunction
 
 " colorscheme wuye
 " highlight CursorLineNr guifg=yellow
-colorscheme jellybeans_custom
+" colorscheme jellybeans_custom
+colorscheme hybrid_material

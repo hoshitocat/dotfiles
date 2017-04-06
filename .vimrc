@@ -67,4 +67,5 @@ source ~/dotfiles/vimrc/vim-markdown.vim
 " colorscheme wuye
 " highlight CursorLine cterm=underline
 " highlight CursorLineNr cterm=underline ctermfg=yellow
-colorscheme jellybeans_custom
+set background=dark
+colorscheme hybrid_material
