@@ -24,21 +24,18 @@ autoload -Uz vcs_info
 # %u アンステージングが存在するとき表示
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' unstagedstr "%F{226}[*]%f"
-zstyle ':vcs_info:git:*' stagedstr "%F{039}[+]%f"
-zstyle ':vcs_info:*' formats "%F{255}on%f %F{062}%b%f %u%c"
+zstyle ':vcs_info:git:*' unstagedstr "%F{226}* %f"
+zstyle ':vcs_info:git:*' stagedstr "%F{039}+ %f"
+zstyle ':vcs_info:*' formats "[%u%c%F{062}%b%f]"
 zstyle ':vcs_info:*' actionformats '%F{062}%b%f%F{255}|%f%F{009}%a%f'
 
-# local secondPLine="☆  "
-local secondPLine="%% "
-
 # 右プロンプトの設定
-local firstRPLine="[%D{%y/%m/%d %T}]"
+# local firstRPLine="[%D{%y/%m/%d %T}]"
 
 precmd () {
   vcs_info
-  PROMPT=$firstPLine' ${vcs_info_msg_0_}'$'\n'$secondPLine
-  RPROMPT=$firstRPLine
+  PROMPT=$firstPLine'%% '
+  RPROMPT='${vcs_info_msg_0_}'
 }
 
 # cdr
