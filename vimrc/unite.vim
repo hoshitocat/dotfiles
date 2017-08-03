@@ -21,7 +21,7 @@ nnoremap [Unite]rfl :<C-u>Unite file file/new -input=lib/ <CR>
 nnoremap [Unite]rr :<C-u>Unite file_rec/async:spec/ <CR>
 nnoremap [Unite]rfr :<C-u>Unite file file/new -input=spec/ <CR>
 " search for current directory
-nnoremap [Unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+" nnoremap [Unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 " unite grep uses ag(The Silver Searcher)
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
