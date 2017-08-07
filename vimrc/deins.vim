@@ -16,6 +16,7 @@ call dein#add('Shougo/dein.vim')
 " Add or remove your plugins here:
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimproc.vim', { 'build' : 'make' })
 call dein#add('Shougo/vimshell.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('danro/rename.vim')
