@@ -40,11 +40,6 @@ set omnifunc=syntaxcomplete#Complete
 set lazyredraw
 set nocursorline
 
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
-
 let g:netrw_liststyle=3
 let mapleader=','
 
