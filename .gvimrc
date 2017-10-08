@@ -24,7 +24,7 @@ nnoremap <D-u> :<C-u>call ToggleTransparency()<CR>
 
 function! ToggleTransparency()
   if &transparency == 0
-    set transparency=20
+    set transparency=10
   else
     set transparency=0
   endif
