@@ -4,15 +4,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath^=/Users/hoshitocat/.vim/deins/repos/github.com/Shougo/dein.vim
+set runtimepath^=~/.vim/deins/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/hoshitocat/.vim/deins')
-  call dein#begin('/Users/hoshitocat/.vim/deins')
+if dein#load_state('~/.vim/deins')
+  call dein#begin('~/.vim/deins')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/hoshitocat/.vim/deins/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.vim/deins/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neomru.vim')
