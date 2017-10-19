@@ -4,7 +4,7 @@ set clipboard=unnamed
 set nobackup
 set imdisable
 set linespace=0
-set guifont=Ricty\ Regular\ for\ Powerline:h12 " OS X Setting
+set guifont=Ricty\ Regular\ for\ Powerline:h10 " OS X Setting
 set guioptions=eg
 " e is smart tab bar
 " I don't know what g mean...orz
