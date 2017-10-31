@@ -6,7 +6,7 @@ filetype indent on
 filetype plugin on
 
 if has('persistent_undo')
-  set undodir=~/.vim/.vimundo
+  set undodir=~/.vim/undo_history
   set undofile
 endif
 
