@@ -13,7 +13,7 @@ set guioptions=eg
 " r and R is right scrollbar
 " l and L is left scrollbar
 " b is bottom scrollbar
-set cursorline
+set nocursorline
 
 set cmdheight=1 " command line buffer height
 set laststatus=2 " status line position
