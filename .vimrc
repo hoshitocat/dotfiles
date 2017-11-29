@@ -10,35 +10,37 @@ if has('persistent_undo')
   set undofile
 endif
 
+set backspace=start,eol,indent
+set clipboard+=unnamed
+set cmdheight=1
 set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set number
-set nobackup
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set autoindent
-set smartindent
+set fileencoding=utf-8
+set hlsearch
 set ignorecase
+set laststatus=2
+set lazyredraw
 set list
 set listchars=tab:\ \ ,trail:･,eol:↲
-set hlsearch
-set backspace=start,eol,indent
-set t_ut=
-set t_Co=256
-set clipboard+=unnamed
-set wildmode=list:longest,full
-set nosmartcase
-set wildignorecase
-set noeb vb t_vb=
-set cmdheight=1
-set laststatus=2
-set pumheight=5
-set omnifunc=syntaxcomplete#Complete
-set lazyredraw
+set nobackup
 set nocursorline
+set noeb vb t_vb=
+set nosmartcase
+set number
+set omnifunc=syntaxcomplete#Complete
+set pumheight=5
+set shiftwidth=2
+set smartindent
+set softtabstop=2
+set t_Co=256
+set t_ut=
+set tabstop=2
+set termencoding=utf-8
+set wildignorecase
+set wildmode=list:longest,full
+
+" disabled auto insert commend
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 let g:netrw_liststyle=3
 let mapleader=','
