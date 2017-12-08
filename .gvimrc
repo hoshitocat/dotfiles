@@ -3,7 +3,7 @@ set lines=50
 set clipboard=unnamed
 set nobackup
 set imdisable
-set linespace=0
+set linespace=2
 set guifont=Ricty\ Regular\ for\ Powerline:h10 " OS X Setting
 set guioptions=eg
 " e is smart tab bar
