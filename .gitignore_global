@@ -21,3 +21,4 @@ dump.rdb
 
 # Ignore IDE settings file
 .vscode
+.idea/*
