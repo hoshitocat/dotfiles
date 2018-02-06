@@ -32,6 +32,7 @@ set pumheight=5
 set shiftwidth=2
 set smartindent
 set softtabstop=2
+set synmaxcol=160
 set t_Co=256
 set t_ut=
 set tabstop=2
