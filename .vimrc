@@ -58,9 +58,10 @@ source ~/dotfiles/vimrc/lightline.vim
 source ~/dotfiles/vimrc/jedi-vim.vim
 " vim-go
 source ~/dotfiles/vimrc/vim-go.vim
-
 " vim-markdown
 source ~/dotfiles/vimrc/vim-markdown.vim
+" previm
+source ~/dotfiles/vimrc/previm.vim
 
 " colorscheme wuye
 " highlight CursorLine cterm=underline
