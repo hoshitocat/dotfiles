@@ -34,3 +34,5 @@ endfunction
 " highlight CursorLineNr guifg=yellow
 " colorscheme jellybeans_custom
 colorscheme hybrid_material
+
+let g:solarized_menu=0
