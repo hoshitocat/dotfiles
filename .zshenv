@@ -1,5 +1,5 @@
-if [ -f ~/dotfiles/.zshenvSettings ]; then
-  source ~/dotfiles/.zshenvSettings
+if [ -f ~/dotfiles/shell/env.zsh ]; then
+  source ~/dotfiles/shell/env.zsh
 fi
 
 if [ -f ~/dotfiles/env_variables.zsh ]; then

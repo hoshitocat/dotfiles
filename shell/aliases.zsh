@@ -10,3 +10,4 @@ alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
 alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias gvim='vim -g'
 alias vi="vim"
+alias docker-rc='docker exec -it $(docker-compose ps -q app) /bin/bash -c ""'
