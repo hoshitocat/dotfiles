@@ -18,7 +18,7 @@ function docker_rails()
     echo "console: execute rails console in container"
     echo "bash: execute /bin/bash in docker container"
   else
-    if [ "$1" = "console" ]; then
+    if [ "$1" = "console" ] || [ "$1" = "c" ]; then
       docker exec -it $(docker-compose ps -q app) /bin/bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; rails c"
     elif [ "$1" = "bash" ]; then
       docker exec -it $(docker-compose ps -q app) /bin/bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec bash"
