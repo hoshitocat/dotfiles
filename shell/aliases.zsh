@@ -10,21 +10,21 @@ alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
 alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias gvim='vim -g'
 alias vi="vim"
-alias drails=docker_rails
+alias dc=docker_compose_run
 
-function docker_rails()
+function docker_compose_run()
 {
   if [ -z "$1" ]; then
-    echo "console: execute rails console in container"
-    echo "bash: execute /bin/bash in docker container"
+    docker-compose help
+    echo "  console, c         Execute rails console"
+    echo "  bash, shell        Execute /bin/bash"
   else
     if [ "$1" = "console" ] || [ "$1" = "c" ]; then
       docker exec -it $(docker-compose ps -q app) /bin/bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; rails c"
     elif [ "$1" = "bash" ]; then
       docker exec -it $(docker-compose ps -q app) /bin/bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec bash"
     else
-      echo "console: execute rails console in container"
-      echo "bash: execute /bin/bash in docker container"
+      docker-compose $@
     fi
   fi
 }
