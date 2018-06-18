@@ -43,3 +43,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 let g:netrw_liststyle=3
 let mapleader=','
+
+" teminal shortcut
+nnoremap \t :<C-u>terminal ++curwin<cr>
