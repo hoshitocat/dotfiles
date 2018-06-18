@@ -1,0 +1,8 @@
+[user]
+	name = hoshitocat
+	email = hoshitocat@gmail.com
+[core]
+	editor = vim
+	excludesfile = /Users/hoshitocat/dotfiles/.gitignore_global
+[commit]
+	template = /Users/hoshitocat/dotfiles/.commit_template
