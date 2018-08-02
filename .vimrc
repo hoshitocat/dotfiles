@@ -14,9 +14,4 @@ let files = [
 for file in files
   exec 'source '.$HOME.'/dotfiles/vimrc/'.file
 endfor
-
-" colorscheme wuye
-" highlight CursorLine cterm=underline
-" highlight CursorLineNr cterm=underline ctermfg=yellow
-set background=dark
-colorscheme jellybeans_custom
+colorscheme hybrid_material

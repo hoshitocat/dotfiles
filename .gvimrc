@@ -29,10 +29,4 @@ function! ToggleTransparency()
     set transparency=0
   endif
 endfunction
-
-" colorscheme wuye
-" highlight CursorLineNr guifg=yellow
-" colorscheme jellybeans_custom
 colorscheme hybrid_material
-
-let g:solarized_menu=0

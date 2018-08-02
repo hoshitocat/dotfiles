@@ -40,7 +40,6 @@ if dein#load_state('~/.vim/deins')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tyru/open-browser.vim')
   call dein#add('vim-scripts/SQLUtilities')
-  call dein#add('vim-scripts/WuYe')
 
   " Required:
   call dein#end()
