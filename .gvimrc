@@ -4,7 +4,8 @@ set clipboard=unnamed
 set nobackup
 set imdisable
 set linespace=2
-set guifont=Monaco:h10 " OS X Setting
+set guifont=Monaco:h12 " OS X Setting
+set columnspace=1
 set guioptions=eg
 " e is smart tab bar
 " I don't know what g mean...orz
