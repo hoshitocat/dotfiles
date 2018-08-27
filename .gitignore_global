@@ -22,3 +22,6 @@ dump.rdb
 # Ignore IDE settings file
 .vscode
 .idea/*
+
+# Ignore direnv config
+.envrc
