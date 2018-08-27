@@ -24,3 +24,6 @@ export PATH="${PATH}:${HOME}/Library/Android/sdk/platform-tools"
 
 # cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# direnv
+eval "$(direnv hook zsh)"
