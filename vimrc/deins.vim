@@ -39,6 +39,7 @@ if dein#load_state('~/.vim/deins')
   call dein#add('tpope/vim-commentary')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tyru/open-browser.vim')
+  call dein#add('vim-scripts/Align')
   call dein#add('vim-scripts/SQLUtilities')
 
   " Required:
