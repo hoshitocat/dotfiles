@@ -27,3 +27,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # direnv
 eval "$(direnv hook zsh)"
+

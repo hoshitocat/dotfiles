@@ -21,9 +21,8 @@ function svim() {
   vim sftp://$*/
 }
 
-# rbenv
-if [ -d ${HOME}/.rbenv ]; then
-  export PATH="$HOME/.rbenv/bin:${HOME}/.rbenv/shims:${PATH}"
-  eval "$(rbenv init -)"
+# zshrc_env
+if [ -f ~/dotfiles/shell/zshrc_env.zsh ]; then
+  source ~/dotfiles/shell/zshrc_env.zsh
 fi
 
