@@ -6,3 +6,5 @@
 	excludesfile = /Users/hoshitocat/dotfiles/.gitignore_global
 [commit]
 	template = /Users/hoshitocat/dotfiles/.commit_template
+[url "git@github.com:"]
+	insteadOf = https://github.com/
