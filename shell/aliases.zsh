@@ -11,7 +11,7 @@ alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias gvim='vim -g'
 alias vi="vim"
 alias dc=docker_compose_run
-alias onelogin-aws-login="docker run --rm -v $HOME:/root -i -t koid/awscli-with-onelogin onelogin-aws-login $@"
+alias onelogin-aws-login="docker run --rm -v $HOME:/root -i -t koid/awscli-with-onelogin onelogin-aws-login -u ryohei.hoshi@gunosy.com -d 32400 $@"
 alias aws="docker run --rm -v $HOME:/root koid/awscli-with-onelogin aws $@"
 
 function docker_compose_run()
