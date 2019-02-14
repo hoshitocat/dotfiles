@@ -1,5 +1,5 @@
 let files = [
-  \'deins.vim',
+  \'vundle.vim',
   \'vimrc.vim',
   \'unite.vim',
   \'ctrlp.vim',
