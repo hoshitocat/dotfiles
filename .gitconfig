@@ -8,3 +8,5 @@
 	template = /Users/hoshitocat/dotfiles/.commit_template
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[alias]
+  pf = !git pull && git fetch -p
