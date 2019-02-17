@@ -1,11 +1,11 @@
 [user]
-	name = hoshitocat
+	name = dorocy
 	email = hoshitocat@gmail.com
 [core]
 	editor = vim
-	excludesfile = /Users/hoshitocat/dotfiles/.gitignore_global
+	excludesfile = ~/dotfiles/git/ignore
 [commit]
-	template = /Users/hoshitocat/dotfiles/.commit_template
+	template = ~/dotfiles/git/commit_tmpl
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [alias]
