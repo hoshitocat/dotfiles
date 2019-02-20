@@ -8,7 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin '[Github Author]/[Github repo]' の形式で記入
 Plugin 'Shougo/neomru.vim'
 Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimproc.vim', { 'build' : 'make' }
+Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'danro/rename.vim'
@@ -37,3 +37,11 @@ Plugin 'vim-scripts/SQLUtilities'
 
 call vundle#end()
 filetype plugin indent on
+
+" make vimproc for macos
+let b:vimproc = "~/.vim/bundle/vimproc.vim/"
+if isdirectory(expand(b:vimproc))
+  if empty(glob(b:vimproc.'lib/vimproc_mac.so'))
+    call system('cd '.b:vimproc.' && make')
+  endif
+endif
