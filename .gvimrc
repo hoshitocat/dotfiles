@@ -30,4 +30,5 @@ function! ToggleTransparency()
     set transparency=0
   endif
 endfunction
+set background=dark
 colorscheme hybrid_material
