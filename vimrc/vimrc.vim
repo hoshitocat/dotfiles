@@ -46,3 +46,9 @@ let mapleader=','
 
 " teminal shortcut
 nnoremap \t :<C-u>terminal ++curwin<cr>
+
+" save position last closed
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
