@@ -10,6 +10,15 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](tmp|node_modules|.git|bundle|hg|svn)',
   \ 'file': '\v\.(exe|so|dll|o)$',
   \ }
+
+" NOTE: You can check mappings :help ctrlp-mappings
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtBS()':        ['<c-h>', '<bs>'],
+  \ 'PrtCurLeft()':   ['<left>', '<c-b>'],
+  \ 'PrtCurRight()':  ['<right>', '<c-f>'],
+  \ 'ToggleType(1)':  ['<c-l>'],
+  \ 'ToggleType(-1)': ['<nop>'],
+  \ }
 if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif

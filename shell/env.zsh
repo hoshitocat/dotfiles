@@ -28,3 +28,5 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # direnv
 eval "$(direnv hook zsh)"
 
+# LOCALE
+export LC_ALL=en_US.UTF-8
