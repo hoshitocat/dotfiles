@@ -7,4 +7,3 @@ hoge
 
 test
 
-hoge-1
