@@ -6,3 +6,5 @@ dotfiles
 hoge
 
 test
+
+hoge-1
