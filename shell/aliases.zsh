@@ -10,7 +10,6 @@ alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
 alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias gvim='vim -g'
 alias vi="vim"
-alias awk=gawk # NOTE: replace GNU awk from OS X awk
 
 function docker_compose_run()
 {
