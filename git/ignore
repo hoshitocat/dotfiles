@@ -23,6 +23,7 @@ dump.rdb
 .vscode
 .idea
 .idea/*
+*.iml
 
 # Ignore direnv config
 .envrc
