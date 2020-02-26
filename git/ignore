@@ -27,3 +27,6 @@ dump.rdb
 
 # Ignore direnv config
 .envrc
+
+# Ignore .node-version
+.node-version
