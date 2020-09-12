@@ -1,4 +1,4 @@
-alias ls='ls -G'
+alias ls='ls -GF'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
