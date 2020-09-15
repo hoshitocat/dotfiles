@@ -7,7 +7,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.DS_Store,*/.git/**     " MacOSX/Linu
 set wildignore+=*\\vendor\\**
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](tmp|node_modules|.git|bundle|hg|svn)',
+  \ 'dir':  '\v[\/](tmp|node_modules|.git|bundle|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll|o)$',
   \ }
 
