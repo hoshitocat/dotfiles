@@ -8,6 +8,7 @@ if has('persistent_undo')
   set undofile
 endif
 
+set tags=.tags;$HOME
 set backspace=start,eol,indent
 set clipboard+=unnamed
 set cmdheight=1

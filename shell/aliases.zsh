@@ -6,7 +6,7 @@ alias grep='grep --color -n'
 alias ag='ag --hidden -i'
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias ctags="`brew --prefix`/bin/ctags"
-alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
+alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R . -f .tags'
 alias vim='LANG=en_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias gvim='vim -g'
 alias vi="vim"
