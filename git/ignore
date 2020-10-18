@@ -8,9 +8,9 @@
 # rbenv local setting file
 .ruby-version
 
-# tags file(using vim tag jump)
+# Ctags tags file(using vim tag jump)
 # NOTE: this is file!!!
-tags
+.tags
 
 # Ignore local gems
 vendor/bundle
