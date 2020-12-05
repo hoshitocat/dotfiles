@@ -14,6 +14,8 @@ setopt TRANSIENT_RPROMPT
 # 左プロンプトの設定
 # local firstPLine="%F{202}%n%f %F{255}at%f %F{178}%m%f %F{255}in%f %F{106}%~%f"
 local firstPLine="%F{008}%~%f"
+local NEWLINE=$'\n'
+local secondPLine="$ "
 
 # VCS(Version Control Systems)の情報を取得するzshの便利関数 vcs_infoを使う
 autoload -Uz vcs_info
@@ -26,7 +28,7 @@ setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' unstagedstr "%F{226}* %f"
 zstyle ':vcs_info:git:*' stagedstr "%F{039}+ %f"
-zstyle ':vcs_info:*' formats "[%u%c%F{045}%b%f]"
+zstyle ':vcs_info:*' formats " [%u%c%F{045}%b%f]"
 zstyle ':vcs_info:*' actionformats '%F{045}%b%f%F{255}|%f%F{009}%a%f'
 
 # 右プロンプトの設定
@@ -34,8 +36,7 @@ zstyle ':vcs_info:*' actionformats '%F{045}%b%f%F{255}|%f%F{009}%a%f'
 
 precmd () {
   vcs_info
-  PROMPT=$firstPLine'$ '
-  RPROMPT='${vcs_info_msg_0_}'
+  PROMPT="${firstPLine}${vcs_info_msg_0_}${NEWLINE}${secondPLine}"
 }
 
 # cdr
