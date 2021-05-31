@@ -1,0 +1,4 @@
+[include]
+  path = ~/dotfiles/git/config
+[pull]
+	rebase = false
