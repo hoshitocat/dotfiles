@@ -12,13 +12,6 @@ export PATH="/usr/local/mysql/bin:$PATH"
 # ls color
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
-# $GOPATH setting
-if [ -x "`which go`" ]; then
-  export GOROOT=`go env GOROOT`
-  export GOPATH=$HOME/Developments/go
-  export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-fi
-
 # adb Android Debug Bridge
 export PATH="${PATH}:${HOME}/Library/Android/sdk/platform-tools"
 
