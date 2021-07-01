@@ -15,8 +15,5 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # adb Android Debug Bridge
 export PATH="${PATH}:${HOME}/Library/Android/sdk/platform-tools"
 
-# cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 # LOCALE
 export LC_ALL=en_US.UTF-8

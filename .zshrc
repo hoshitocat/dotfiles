@@ -13,9 +13,6 @@ if [ -f ~/dotfiles/shell/aliases.zsh ]; then
   source ~/dotfiles/shell/aliases.zsh
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # vim sftp://***RemoteHostName***/
 function svim() {
   vim sftp://$*/
