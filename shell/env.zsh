@@ -17,3 +17,8 @@ export PATH="${PATH}:${HOME}/Library/Android/sdk/platform-tools"
 
 # LOCALE
 export LC_ALL=en_US.UTF-8
+
+# export PATH with GOPATH
+if command -v go &> /dev/null; then
+  export PATH="${PATH}:$(go env GOPATH)/bin"
+fi
