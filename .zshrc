@@ -12,14 +12,3 @@ fi
 if [ -f ~/dotfiles/shell/aliases.zsh ]; then
   source ~/dotfiles/shell/aliases.zsh
 fi
-
-# vim sftp://***RemoteHostName***/
-function svim() {
-  vim sftp://$*/
-}
-
-# zshrc_env
-if [ -f ~/dotfiles/shell/zshrc_env.zsh ]; then
-  source ~/dotfiles/shell/zshrc_env.zsh
-fi
-
