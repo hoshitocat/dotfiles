@@ -6,8 +6,6 @@
 	excludesfile = ~/dotfiles/git/ignore
 [commit]
 	template = ~/dotfiles/git/commit_tmpl
-[url "git@github.com:"]
-	insteadOf = https://github.com/
 [alias]
   pf = !git pull && git fetch -p
 [init]
