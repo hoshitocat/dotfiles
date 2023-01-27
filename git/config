@@ -8,6 +8,11 @@
 	template = ~/dotfiles/git/commit_tmpl
 [alias]
   pf = !git pull && git fetch -p
+  st = status
+  co = commit -v
+  ch = checkout
+  au = add -u
+  br = branch
 [init]
 	defaultBranch = main
 [pull]
