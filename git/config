@@ -13,6 +13,7 @@
   ch = checkout
   au = add -u
   br = branch
+  push = push -u
 [init]
 	defaultBranch = main
 [pull]
