@@ -7,13 +7,14 @@
 [commit]
 	template = ~/dotfiles/git/commit_tmpl
 [alias]
-  pf = !git pull && git fetch -p
   st = status
   co = commit -v
   ch = checkout
   au = add -u
   br = branch
   pu = push -u
+  sync = !git ch main | git pull && git fetch -p && git branch --merged | grep -E -v 'main|master|develop' | xargs git branch -d && git ch -
+  main = !git branch | grep -E 'main|master|develop' | awk '{print $2}' | xargs git checkout
 [init]
 	defaultBranch = main
 [pull]
