@@ -13,6 +13,7 @@
   au = add -u
   br = branch
   pu = push -u
+  pf = !git pull && git fetch -p
   sync = !git ch main | git pull && git fetch -p && git branch --merged | grep -E -v 'main|master|develop' | xargs git branch -d && git ch -
   main = !git branch | grep -E 'main|master|develop' | awk '{print $2}' | xargs git checkout
 [init]
