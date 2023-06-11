@@ -1,13 +1,22 @@
-alias ls='ls -GF'
+if [[ "$OSTYPE" == "linux-gnu" ]] then
+  alias ls='ls --color'
+  alias vi="/bin/vim"
+  alias vim=vi
+fi
+
+if [[ "$OSTYPE" =~ "darwin*" ]] then
+  alias ls='ls -GF'
+  alias vi="/Applications/MacVim.app/Contents/bin/vim"
+  alias vim=vi
+  alias gvim="/Applications/MacVim.app/Contents/bin/gvim"
+fi
+
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias grep='grep --color -n'
 alias ag='ag --hidden -i'
 alias dc="docker compose"
-alias vi="/Applications/MacVim.app/Contents/bin/vim"
-alias vim=vi
-alias gvim="/Applications/MacVim.app/Contents/bin/gvim"
 
 function docker_compose_run()
 {
