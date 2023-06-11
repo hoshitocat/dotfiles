@@ -3,3 +3,4 @@
 .vim/view/*
 .vim/info/undo/*
 env_variables.zsh
+git/config

@@ -1,0 +1,35 @@
+[user]
+	name = hoshitocat
+	email = hoshitocat@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBjQSslCGPTAdRVJwoSdjHMVO66wRCulu9BxVPA1U356
+
+[core]
+	editor = vim
+	excludesfile = ~/dotfiles/git/ignore
+
+[commit]
+	template = ~/dotfiles/git/commit_tmpl
+  gpgsign = true
+
+[alias]
+  st = status
+  co = commit -v
+  ch = checkout
+  au = add -u
+  br = branch
+  pu = push -u
+  pf = !git pull && git fetch -p
+  sync = !git ch main | git pull && git fetch -p && git branch --merged | grep -E -v 'main|master|develop' | xargs git branch -d && git ch -
+  main = !git branch | grep -E 'main|master|develop' | awk '{print $2}' | xargs git checkout
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
