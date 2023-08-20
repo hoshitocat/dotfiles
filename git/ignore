@@ -33,3 +33,6 @@ dump.rdb
 
 # Ignore intellij graphql config
 **/graphql.config.yml
+
+# Ignore c++ default out
+a.out
