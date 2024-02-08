@@ -38,6 +38,7 @@ set tabstop=2
 set termencoding=utf-8
 set wildignorecase
 set wildmode=list:longest,full
+set shell=/opt/homebrew/bin/zsh
 
 " disabled auto insert commend
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
