@@ -36,3 +36,10 @@ dump.rdb
 
 # Ignore c++ default out
 a.out
+
+# Ignore env files
+.env.local
+.env.dev
+.env.stg
+.env.prd
+
