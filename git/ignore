@@ -42,4 +42,5 @@ a.out
 .env.dev
 .env.stg
 .env.prd
+.env.test
 
