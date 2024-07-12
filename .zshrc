@@ -12,3 +12,7 @@ fi
 if [ -f ~/dotfiles/shell/aliases.zsh ]; then
   source ~/dotfiles/shell/aliases.zsh
 fi
+
+if [ -f ~/dotfiles/shell/gcloud.zsh ]; then
+  source ~/dotfiles/shell/gcloud.zsh
+fi
