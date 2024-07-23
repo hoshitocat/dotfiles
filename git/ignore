@@ -44,3 +44,5 @@ a.out
 .env.prd
 .env.test
 
+# Ignore GraphQL config
+.graphqlrc.yml
