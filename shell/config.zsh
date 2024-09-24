@@ -64,3 +64,4 @@ zstyle ':completion:*:default' menu select=1
 # GOPATH,GOBINの設定
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
