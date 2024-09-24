@@ -61,3 +61,6 @@ autoload -U compinit
 compinit
 zstyle ':completion:*:default' menu select=1
 
+# GOPATH,GOBINの設定
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
