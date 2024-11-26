@@ -17,7 +17,7 @@ alias cp='cp -i'
 alias grep='grep --color -n'
 alias ag='ag --hidden -i'
 alias dc="docker compose"
-alias cat='bat'
+alias cat='bat --theme "Visual Studio Dark+"'
 
 function docker_compose_run()
 {
