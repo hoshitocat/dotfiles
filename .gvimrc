@@ -4,7 +4,7 @@ set clipboard=unnamed
 set nobackup
 set imdisable
 set linespace=2
-set guifont=Monaco:h14 " OS X Setting
+set guifont=Hack\ Nerd\ Font\ Mono:h14 " OS X Setting
 set columnspace=1
 set guioptions=eg
 " e is smart tab bar
