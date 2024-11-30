@@ -19,6 +19,7 @@ alias ag='ag --hidden -i'
 alias dc="docker compose"
 alias cat='bat --theme "Visual Studio Dark+"'
 alias zel=zellij
+alias lg=lazygit
 
 function docker_compose_run()
 {
