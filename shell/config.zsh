@@ -62,6 +62,6 @@ compinit
 zstyle ':completion:*:default' menu select=1
 
 # GOPATH,GOBINの設定
-export GOPATH=$HOME/go
+export GOROOT=$(go1.23.4 env GOROOT)
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
