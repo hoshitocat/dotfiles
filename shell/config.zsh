@@ -60,9 +60,3 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 autoload -U compinit
 compinit
 zstyle ':completion:*:default' menu select=1
-
-# GOPATH,GOBINの設定
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
-export GOROOT=$(go1.24.1 env GOROOT)
-export PATH=$GOROOT/bin:$PATH
