@@ -1,21 +1,46 @@
 
 
 # ==== Emojis ====
-# 🐛  :bug: バグ修正
-# 👍  :+1: 機能改善
-# ✨  :sparkles: 部分的な機能追加
-# 🎉  :tada: 盛大に祝うべき大きな機能追加
-# ♻️  :recycle: リファクタリング
-# 🔪  :hocho: 不要な機能・使われなくなった機能の削除
-# 💚  :green_heart: テストやCIの修正・改善
-# 👕  :shirt: Lintエラーの修正やコードスタイルの修正
-# 🚀  :rocket: パフォーマンス改善
-# 🆙  :up: 依存パッケージなどのアップデート
-# 🔒  :lock: 新機能の公開範囲の制限
-# 👮  :cop: セキュリティ関連の改善
-# 📝  :memo: ドキュメント関係の追加・修正
-# ⚙   :wrench: 設定ファイルの追加・修正
-# ⚖   :balance_scale: ABテスト追加・修正
+
+# Feature / Update
+# 🎉  :tada: Initial commit or Big new feature
+# ✨  :sparkles: New feature
+# ⚡  :zap: General update
+# 🔥  :fire: Removing code
+# 💥  :boom: Breaking changes
+# 📦  :package: Add or update a package
+# 🔖  :bookmark: Release / Version tags
+
+# Bug / Fix / Perf
+# 🐛  :bug: Bugfix
+# 👕  :shirt: Fix lint error or code style
+# 🐎  :horse: Performance improvement
+# 💩  :hankey: Bad code / need improvement
+# ⏪  :rewind: Revert
+# 💄  :lipstick: Cosmetic changes
+
+# Review / Docs
+# 👌  :ok_hand: Code review changes
+# 📝  :memo: Documentation
+# 💡  :bulb: Documenting source code
+
+# Test / Build/ Deploy
+# 💚  :green_heart: Test or CI
+# 👷  :construction_worker: Adding CI build system
+# 🚀  :rocket: Deploying stuff
+
+# Config / Infra
+# ⚙   :wrench: Configuration files
+# 🐳  :whale: Docker
+# 📦  :package: Add or update a package
+# 🆙  :up: Update dependencies
+# 🚚  :truck: Move/rename files
+
+# Security
+# 🔒  :lock: Restrict access to new features
+# 👮  :cop: Security improvement
+
+# WIP
 # 🏗️  :building_construction: WIP
 
 # ==== Format ====
