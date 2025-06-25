@@ -6,9 +6,8 @@ fi
 
 if [[ "$OSTYPE" =~ "darwin*" ]] then
   alias ls='ls -GF'
-  alias vi="/Applications/MacVim.app/Contents/bin/vim"
-  alias vim=vi
-  alias gvim="/Applications/MacVim.app/Contents/bin/gvim"
+  alias vim=nvim
+  alias vi=vim
 fi
 
 alias rm='rm -i'
