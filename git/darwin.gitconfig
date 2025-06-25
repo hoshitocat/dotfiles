@@ -4,7 +4,7 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBjQSslCGPTAdRVJwoSdjHMVO66wRCulu9BxVPA1U356
 
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/dotfiles/git/ignore
 
 [commit]
