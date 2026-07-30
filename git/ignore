@@ -49,3 +49,10 @@ a.out
 
 # Ignore Global
 .hoshitocat/*
+
+# kotlin-language-server caches
+kls_database.db
+
+# For Claude CLI
+.claude/**
+CLAUDE.md
