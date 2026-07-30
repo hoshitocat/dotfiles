@@ -8,6 +8,16 @@ if [[ "$OSTYPE" =~ "darwin*" ]] then
   alias ls='ls -GF'
   alias vim=nvim
   alias vi=vim
+
+  gvim() {
+    if [ $# -eq 0 ]; then
+      neovide &
+      disown
+    else
+      neovide -- --cmd "cd $1" &
+      disown
+    fi
+  }
 fi
 
 alias rm='rm -i'
