@@ -1,0 +1,15 @@
+# Match the pane keybindings in .tmux.conf.
+[keys]
+prefix = "ctrl+t"
+
+split_horizontal = "prefix+s"
+split_vertical = "prefix+v"
+
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+
+[ui]
+sidebar_width = 20
+sidebar_min_width = 16
