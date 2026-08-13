@@ -1,0 +1,32 @@
+# Theme
+theme = "TokyoNight Moon"
+
+# Background transparency
+background-opacity = 0.85
+background-blur = false
+
+# Toggle background opacity with Cmd+U
+keybind = cmd+u=toggle_background_opacity
+
+# Font
+font-size = 14
+font-thicken = true
+
+# Spacing
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+
+# macOS appearance
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+
+# Shell integration
+shell-integration = detect
+shell-integration-features = sudo,ssh-env
+
+# Notify when a command finishes in an unfocused tab/window
+notify-on-command-finish = unfocused
+
+# Protect against accidentally pasting multiline commands
+clipboard-paste-protection = true
