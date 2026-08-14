@@ -85,6 +85,8 @@ require("lazy").setup({
 
   {
     "williamboman/mason.nvim",
+    -- Mason is available for other tools, but gopls and goimports are
+    -- installed and updated manually with `go install`.
     config = function()
       require("mason").setup()
     end,
@@ -92,18 +94,89 @@ require("lazy").setup({
 
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+      "hrsh7th/cmp-nvim-lsp",
+    },
     config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local opts = { buffer = args.buf }
           vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
           vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
           vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+          vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
         end,
       })
 
       vim.lsp.config("kotlin_language_server", {})
       vim.lsp.enable("kotlin_language_server")
+
+      vim.lsp.config("gopls", {
+        capabilities = capabilities,
+        settings = {
+          gopls = {
+            gofumpt = true,
+            staticcheck = true,
+            usePlaceholders = true,
+            analyses = {
+              unusedparams = true,
+              unusedwrite = true,
+              shadow = true,
+            },
+          },
+        },
+      })
+      vim.lsp.enable("gopls")
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "go",
+        callback = function()
+          vim.bo.expandtab = false
+          vim.bo.tabstop = 2
+          vim.bo.shiftwidth = 2
+          vim.bo.softtabstop = 2
+        end,
+      })
     end,
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    config = function()
+      local cmp = require("cmp")
+      cmp.setup({
+        mapping = cmp.mapping.preset.insert({
+          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<Tab>"] = cmp.mapping.select_next_item(),
+          ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+        }),
+        sources = {
+          { name = "nvim_lsp" },
+        },
+      })
+    end,
+  },
+
+  {
+    "hrsh7th/cmp-nvim-lsp",
+  },
+
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        go = { "goimports" },
+      },
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = true,
+      },
+    },
   },
 })
