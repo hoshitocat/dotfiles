@@ -1,7 +1,8 @@
 setopt hist_ignore_all_dups
 setopt EXTENDED_HISTORY
 
-export PATH="$(go env GOPATH)/bin:$PATH"
+export EDITOR=nvim
+export PATH="$HOME/.local/bin:$(go env GOPATH)/bin:$PATH"
 
 if [ -f ~/dotfiles/shell/config.zsh ]; then
   source ~/dotfiles/shell/config.zsh
