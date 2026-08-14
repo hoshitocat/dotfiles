@@ -53,6 +53,26 @@ export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=100000
 
+# Clear the visible screen without losing its contents.
+# zsh's default clear-screen widget erases the current viewport in place, so
+# lines that have not entered scrollback cannot be recovered. Instead, scroll
+# the viewport up by its full height (CSI S), moving those lines into scrollback.
+function clear-screen-keep-scrollback() {
+  # Invalidate ZLE's cached rendering of the prompt and current input line.
+  zle -I
+
+  # Push the viewport into scrollback, then move the cursor to the top-left.
+  printf '\e[%dS\e[H' "$LINES"
+
+  # The prompt and input line were pushed away too, so redraw them in place.
+  zle .reset-prompt
+  zle -R
+}
+
+# Register the function as a ZLE widget and replace the default Ctrl+L action.
+zle -N clear-screen-keep-scrollback
+bindkey '^L' clear-screen-keep-scrollback
+
 # zsh doesn't classify uppercase and lowercase.
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 

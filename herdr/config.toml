@@ -1,3 +1,4 @@
+onboarding = false
 # Match the pane keybindings in .tmux.conf.
 [keys]
 prefix = "ctrl+t"
