@@ -19,6 +19,8 @@ navigate_workspace_down = "j"
 sidebar_width = 20
 sidebar_min_width = 16
 
+[ui.sidebar.agents]
+rows = [["state_icon", { token = "pane", fg = "#FFFFFF", dim = false }, { token = "tab", fg = "#FFFFFF", bold = false }]]
+
 [ui.toast]
 delivery = "terminal"
-
