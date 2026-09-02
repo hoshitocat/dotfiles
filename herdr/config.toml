@@ -18,3 +18,7 @@ navigate_workspace_down = "j"
 [ui]
 sidebar_width = 20
 sidebar_min_width = 16
+
+[ui.toast]
+delivery = "terminal"
+
