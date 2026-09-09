@@ -31,7 +31,7 @@ rows = [
 ]
 
 [ui.sidebar.agents]
-row_gap = 1
+row_gap = 0
 
 rows = [
   [
