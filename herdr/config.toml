@@ -39,6 +39,8 @@ rows = [
     { token = "pane", fg = "#89b4fa", bold = true, dim = false },
     "agent",
   ],
-  ["workspace", "tab"],
+  [
+    "workspace",
+    { token = "tab", fg = "#f9e2af", bold = true, dim = false },
+  ],
 ]
-
