@@ -1,6 +1,7 @@
-if [ -f ~/dotfiles/shell/env.zsh ]; then
-  source ~/dotfiles/shell/env.zsh
+if [[ -r "$HOME/dotfiles/shell/env.zsh" ]]; then
+  source "$HOME/dotfiles/shell/env.zsh"
 fi
-
-# If PATH of environmental variables coincides itself when repeated PATH is removed.
 typeset -U path PATH
+if [[ -r "$HOME/.zshenv.local" ]]; then
+  source "$HOME/.zshenv.local"
+fi

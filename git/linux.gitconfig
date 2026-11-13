@@ -1,8 +1,3 @@
-[user]
-	name = hoshitocat
-	email = hoshitocat@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBjQSslCGPTAdRVJwoSdjHMVO66wRCulu9BxVPA1U356
-
 [core]
 	editor = vim
 	excludesfile = ~/dotfiles/git/ignore
@@ -31,3 +26,7 @@
 [gpg]
   format = ssh
 
+
+# Personal/work identity and signing key stay outside this repository.
+[include]
+  path = ~/.gitconfig.local
