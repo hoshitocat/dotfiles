@@ -4,3 +4,17 @@
 .vim/info/undo/*
 env_variables.zsh
 git/config
+
+# Local credentials and machine/company overrides
+*.local
+.env
+.env.*
+!.env.example
+mcp.env
+*.pem
+*.key
+
+# Editor/runtime output
+*.log
+.nvimlog
+git/config.backup.*

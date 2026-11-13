@@ -1,0 +1,26 @@
+{
+  "cli_default_open_behavior": "new_window",
+  "vim_mode": true,
+  "base_keymap": "Zed",
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "buffer_font_family": "Menlo",
+  "terminal": {
+    "font_family": "Menlo",
+    "font_fallbacks": [
+      "Hiragino Sans"
+    ]
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light",
+    "dark": "One Dark"
+  },
+  "markdown_preview": {
+    "limit_content_width": false
+  },
+  "buffer_font_fallbacks": [
+    "Hiragino Sans"
+  ]
+}

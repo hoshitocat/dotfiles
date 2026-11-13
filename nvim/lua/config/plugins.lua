@@ -1,3 +1,4 @@
+-- lazy.nvim bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -15,7 +16,7 @@ require("lazy").setup({
 
   {
     "folke/tokyonight.nvim",
-    priority = 1000,
+    priority = 1000, -- Prioritize loading this package over others.
     config = function()
       vim.cmd("colorscheme tokyonight-storm")
     end,
@@ -26,7 +27,7 @@ require("lazy").setup({
     event = "BufReadPre",
     config = function()
       require("gitsigns").setup({
-        current_line_blame = true,
+        current_line_blame = true, -- show the name of the person who changed the current line
         signs = {
           add = { text = "+" },
           change = { text = "~" },
@@ -49,7 +50,6 @@ require("lazy").setup({
     },
     config = function()
       local telescope = require("telescope")
-      local builtin = require("telescope.builtin")
 
       telescope.setup({
         defaults = {
@@ -74,6 +74,9 @@ require("lazy").setup({
 
       telescope.load_extension("fzf")
 
+      local builtin = require("telescope.builtin")
+
+      -- Keymaps
       vim.keymap.set("n", "<leader>ff", builtin.find_files)
       vim.keymap.set("n", "<leader>fg", builtin.live_grep)
       vim.keymap.set("n", "<leader>fb", builtin.buffers)
@@ -83,10 +86,9 @@ require("lazy").setup({
     end,
   },
 
+  -- LSP
   {
     "williamboman/mason.nvim",
-    -- Mason is available for other tools, but gopls and goimports are
-    -- installed and updated manually with `go install`.
     config = function()
       require("mason").setup()
     end,
@@ -94,89 +96,42 @@ require("lazy").setup({
 
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      "hrsh7th/nvim-cmp",
-      "hrsh7th/cmp-nvim-lsp",
-    },
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local opts = { buffer = args.buf }
           vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
           vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
           vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-          vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
         end,
       })
 
-      vim.lsp.config("kotlin_language_server", {})
-      vim.lsp.enable("kotlin_language_server")
+      -- JetBrains 公式 kotlin-lsp（mason の `kotlin-lsp` パッケージ）
+      -- 旧 kotlin_language_server は OOM で不安定だったため乗り換え。
+      -- 起動バイナリ名は intellij-server（mason が bin に貼るリンク名）。
+      --
+      -- このビルドは有効期限付きで、切れると起動直後に自死する（gd/gr/gi が無反応に
+      -- なる）。検知と更新は config.kotlin_lsp_health に切り出してある。
+      local kotlin_health = require("config.kotlin_lsp_health")
+      kotlin_health.setup()
 
-      vim.lsp.config("gopls", {
-        capabilities = capabilities,
-        settings = {
-          gopls = {
-            gofumpt = true,
-            staticcheck = true,
-            usePlaceholders = true,
-            analyses = {
-              unusedparams = true,
-              unusedwrite = true,
-              shadow = true,
-            },
-          },
+      local mason_bin = vim.fn.stdpath("data") .. "/mason/bin/intellij-server"
+      vim.lsp.config("kotlin_lsp", {
+        cmd = { mason_bin, "--stdio" },
+        filetypes = { "kotlin" },
+        root_markers = {
+          "settings.gradle",
+          "settings.gradle.kts",
+          "build.gradle",
+          "build.gradle.kts",
+          "pom.xml",
+          ".git",
         },
-      })
-      vim.lsp.enable("gopls")
-
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "go",
-        callback = function()
-          vim.bo.expandtab = false
-          vim.bo.tabstop = 2
-          vim.bo.shiftwidth = 2
-          vim.bo.softtabstop = 2
+        on_exit = function(code)
+          kotlin_health.on_exit(code)
         end,
       })
+      vim.lsp.enable("kotlin_lsp")
     end,
-  },
-
-  {
-    "hrsh7th/nvim-cmp",
-    config = function()
-      local cmp = require("cmp")
-      cmp.setup({
-        mapping = cmp.mapping.preset.insert({
-          ["<C-Space>"] = cmp.mapping.complete(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
-          ["<Tab>"] = cmp.mapping.select_next_item(),
-          ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-        }),
-        sources = {
-          { name = "nvim_lsp" },
-        },
-      })
-    end,
-  },
-
-  {
-    "hrsh7th/cmp-nvim-lsp",
-  },
-
-  {
-    "stevearc/conform.nvim",
-    opts = {
-      formatters_by_ft = {
-        go = { "goimports" },
-      },
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_fallback = true,
-      },
-    },
   },
 })

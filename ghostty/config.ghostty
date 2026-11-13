@@ -11,6 +11,8 @@ keybind = cmd+u=toggle_background_opacity
 # Font
 font-size = 14
 font-thicken = true
+font-family = "Menlo"
+font-family = "Hiragino Sans"
 
 # Spacing
 window-padding-x = 12

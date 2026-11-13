@@ -56,3 +56,6 @@ kls_database.db
 # For Claude CLI
 .claude/**
 CLAUDE.md
+
+# Machine-local Claude settings
+**/.claude/settings.local.json
